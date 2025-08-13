@@ -52,11 +52,19 @@ const Contact = () => {
       // 1. 'YOUR_SERVICE_ID' - Service ID from your Gmail service setup
       // 2. 'YOUR_TEMPLATE_ID' - Template ID from your email template
       // 3. 'YOUR_USER_ID' - User ID from your EmailJS account
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+      const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+
+      if (!serviceId || !templateId || !userId) {
+        throw new Error('Missing EmailJS environment variables')
+      }
+
       await send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Replace with your actual EmailJS service ID
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, // Replace with your actual EmailJS template ID
+        serviceId, // EmailJS service ID
+        templateId, // EmailJS template ID
         templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID // Replace with your actual EmailJS user ID
+        userId // EmailJS user ID
       )
 
       setSubmitStatus('success')
