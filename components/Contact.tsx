@@ -44,7 +44,7 @@ const Contact = () => {
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        to_email: 'devaman0110@gmail.com',
+        to_email: 'amanakatsuki3@gmail.com',
         time: new Date().toLocaleString() // Add timestamp
       }
 
@@ -53,10 +53,10 @@ const Contact = () => {
       // 2. 'YOUR_TEMPLATE_ID' - Template ID from your email template
       // 3. 'YOUR_USER_ID' - User ID from your EmailJS account
       await send(
-        'YOUR_SERVICE_ID', // Replace with your actual EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your actual EmailJS template ID
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Replace with your actual EmailJS service ID
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, // Replace with your actual EmailJS template ID
         templateParams,
-        'YOUR_USER_ID' // Replace with your actual EmailJS user ID
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID // Replace with your actual EmailJS user ID
       )
 
       setSubmitStatus('success')
@@ -79,29 +79,28 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'devaman0110@gmail.com',
-      link: 'mailto:devaman0110@gmail.com'
+      value: 'amanakatsuki3@gmail.com',
+      link: 'mailto:amanakatsuki3@gmail.com'
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+91 (626) 411-7894',
+      link: 'tel:+916264117894'
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Jagdalpur, Chhattisgarh',
       link: '#'
     }
   ]
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/in/yourusername', icon: '💼' },
-    { name: 'GitHub', href: 'https://github.com/yourusername', icon: '🐙' },
-    { name: 'Instagram', href: 'https://instagram.com/yourusername', icon: '📸' },
-    { name: 'Naukri.com', href: 'https://naukri.com/yourusername', icon: '💼' },
-    { name: 'LeetCode', href: 'https://leetcode.com/yourusername', icon: '💻' }
+    { name: 'LinkedIn', href: 'https://linkedin.com/in/aman-kashyap-3a4bb7237', icon: '💼' },
+    { name: 'GitHub', href: 'https://github.com/amankas864', icon: '🐙' },
+    { name: 'Instagram', href: 'https://instagram.com/aman_kashyap_a.k_', icon: '📸' },
+    { name: 'LeetCode', href: 'https://leetcode.com/u/amankas864/', icon: '💻' }
   ]
 
   return (

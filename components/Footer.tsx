@@ -9,9 +9,9 @@ const Footer = () => {
   }
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/yourusername', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com/yourusername', label: 'Instagram' },
+    { icon: Github, href: 'https://github.com/amankas864', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://linkedin.com/in/aman-kashyap-3a4bb7237', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://instagram.com/aman_kashyap_a.k_', label: 'Instagram' },
     { icon: Mail, href: 'mailto:devaman0110@gmail.com', label: 'Email' }
   ]
 
@@ -78,8 +78,8 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white">Contact Info</h3>
             <div className="space-y-2 text-dark-400">
               <p>Email: devaman0110@gmail.com</p>
-              <p>Location: San Francisco, CA</p>
-              <p>Available for remote work</p>
+              <p>Location: Jagdalpur, Chhattisgarh</p>
+              <p>Available for remote/full-time work</p>
             </div>
             <div className="pt-4">
               <h4 className="text-sm font-semibold text-primary-400 mb-2">Resume Downloads</h4>
@@ -109,7 +109,7 @@ const Footer = () => {
           
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
             <a
-              href="https://naukri.com/yourusername"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="text-dark-400 hover:text-primary-400 transition-colors duration-300 text-sm"
@@ -117,7 +117,7 @@ const Footer = () => {
               Naukri.com Profile
             </a>
             <a
-              href="https://leetcode.com/yourusername"
+              href="https://leetcode.com/u/amankas864/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-dark-400 hover:text-primary-400 transition-colors duration-300 text-sm"

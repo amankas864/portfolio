@@ -213,7 +213,7 @@ Update all placeholder content with your actual information, projects, and exper
 
 ## 📧 Contact Form Setup
 
-The contact form automatically sends emails to `devaman0110@gmail.com` when someone submits a message. Make sure to:
+The contact form automatically sends emails to `amanakatsuki3@gmail.com` when someone submits a message. Make sure to:
 
 1. Complete EmailJS setup (see Configuration section)
 2. Test the form in development

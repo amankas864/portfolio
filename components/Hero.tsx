@@ -7,8 +7,8 @@ const Hero = () => {
   const handleResumeDownload = (type: 'fullstack' | 'datascience') => {
     // This would link to your actual resume files
     const resumeUrls = {
-      fullstack: '/resume-fs.pdf',
-      datascience: '/resume-ds.pdf'
+      fullstack: '/Resume_Full_Stack.pdf',
+      datascience: '/Resume_DS.pdf'
     }
     
     const link = document.createElement('a')
@@ -20,9 +20,9 @@ const Hero = () => {
   }
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/yourusername', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com/yourusername', label: 'Instagram' },
+    { icon: Github, href: 'https://github.com/amankas864', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://linkedin.com/in/aman-kashyap-3a4bb7237', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://instagram.com/aman_kashyap_a.k_', label: 'Instagram' },
   ]
 
   return (
