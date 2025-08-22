@@ -11,60 +11,60 @@ const ProjectsOverview = () => {
 
   const fullStackProjects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce application with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
+      title: 'Dionysus - Github Repository Tool',
+      description: 'Advanced GitHub repository management and analysis tool with comprehensive features for developers and teams.',
       image: '/api/placeholder/400/250',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
+      tech: ['React', 'Node.js', 'GitHub API', 'JavaScript', 'Express'],
       liveUrl: '#',
+      githubUrl: 'https://github.com/amankas864/dionysus',
+      category: 'Full-Stack'
+    },
+    {
+      title: 'Brainstack - Education Platform',
+      description: 'Comprehensive online education platform designed to enhance learning experiences with interactive features.',
+      image: '/api/placeholder/400/250',
+      tech: ['React', 'Node.js', 'MongoDB', 'Express', 'JavaScript'],
+      liveUrl: 'https://www.brainstackeducation.in',
       githubUrl: '#',
       category: 'Full-Stack'
     },
     {
-      title: 'Task Management App',
-      description: 'Real-time collaborative task management application with drag-and-drop functionality, team collaboration, and progress tracking.',
+      title: 'R-Cart',
+      description: 'Modern e-commerce shopping cart application with user-friendly interface and seamless shopping experience.',
       image: '/api/placeholder/400/250',
-      tech: ['Next.js', 'TypeScript', 'Socket.io', 'PostgreSQL', 'Tailwind'],
+      tech: ['React', 'JavaScript', 'CSS', 'HTML', 'Local Storage'],
       liveUrl: '#',
-      githubUrl: '#',
-      category: 'Full-Stack'
-    },
-    {
-      title: 'Social Media Dashboard',
-      description: 'Analytics dashboard for social media management with data visualization, scheduling tools, and performance metrics.',
-      image: '/api/placeholder/400/250',
-      tech: ['React', 'D3.js', 'Express.js', 'Redis', 'Chart.js'],
-      liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/amankas864/R-Cart',
       category: 'Full-Stack'
     }
   ]
 
   const dataScienceProjects = [
     {
-      title: 'Customer Churn Prediction',
-      description: 'Machine learning model to predict customer churn using ensemble methods. Achieved 89% accuracy with feature engineering and hyperparameter tuning.',
+      title: 'Dionysus - Github Repository Tool',
+      description: 'Data-driven GitHub repository analysis tool with machine learning capabilities for repository insights and metrics.',
       image: '/api/placeholder/400/250',
-      tech: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib'],
+      tech: ['Python', 'Machine Learning', 'GitHub API', 'Data Analysis', 'Pandas'],
       liveUrl: '#',
+      githubUrl: 'https://github.com/amankas864/dionysus',
+      category: 'Data Science'
+    },
+    {
+      title: 'Sentiment Analysis Using BERT',
+      description: 'Advanced sentiment analysis model leveraging BERT transformers for accurate text classification and emotion detection.',
+      image: '/api/placeholder/400/250',
+      tech: ['Python', 'BERT', 'Transformers', 'NLP', 'TensorFlow'],
+      liveUrl: 'https://colab.research.google.com/drive/12oWbIpJTpC2oPwydRht-mHAzfa_7ol9c',
       githubUrl: '#',
       category: 'Data Science'
     },
     {
-      title: 'Sentiment Analysis API',
-      description: 'NLP-based sentiment analysis service using BERT transformers. Processes text data and provides real-time sentiment classification.',
+      title: 'Fuzzy Energy System',
+      description: 'Intelligent energy management system using fuzzy logic for optimized energy distribution and consumption analysis.',
       image: '/api/placeholder/400/250',
-      tech: ['Python', 'Transformers', 'FastAPI', 'Docker', 'AWS'],
+      tech: ['Python', 'Fuzzy Logic', 'Energy Systems', 'Optimization', 'NumPy'],
       liveUrl: '#',
-      githubUrl: '#',
-      category: 'Data Science'
-    },
-    {
-      title: 'Stock Price Forecasting',
-      description: 'Time series analysis and forecasting model for stock prices using LSTM neural networks and technical indicators.',
-      image: '/api/placeholder/400/250',
-      tech: ['Python', 'TensorFlow', 'LSTM', 'Pandas', 'Plotly'],
-      liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/surajverma1923/FUZZY-ENERGY-SYSTEM',
       category: 'Data Science'
     }
   ]
@@ -121,7 +121,7 @@ const ProjectsOverview = () => {
             </div>
             <h3 className="text-3xl font-bold text-white">Full-Stack Development</h3>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {fullStackProjects.map((project, index) => (
               <motion.div
@@ -138,7 +138,7 @@ const ProjectsOverview = () => {
                   </div>
                   <div className="absolute inset-0 bg-primary-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-primary-400 font-medium">{project.category}</span>
@@ -161,15 +161,15 @@ const ProjectsOverview = () => {
                       </a>
                     </div>
                   </div>
-                  
+
                   <h4 className="text-xl font-bold text-white group-hover:text-primary-400 transition-colors duration-300">
                     {project.title}
                   </h4>
-                  
+
                   <p className="text-dark-400 text-sm leading-relaxed">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
                       <span
@@ -199,7 +199,7 @@ const ProjectsOverview = () => {
             </div>
             <h3 className="text-3xl font-bold text-white">Data Science & ML</h3>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {dataScienceProjects.map((project, index) => (
               <motion.div
@@ -216,7 +216,7 @@ const ProjectsOverview = () => {
                   </div>
                   <div className="absolute inset-0 bg-primary-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-primary-400 font-medium">{project.category}</span>
@@ -239,15 +239,15 @@ const ProjectsOverview = () => {
                       </a>
                     </div>
                   </div>
-                  
+
                   <h4 className="text-xl font-bold text-white group-hover:text-primary-400 transition-colors duration-300">
                     {project.title}
                   </h4>
-                  
+
                   <p className="text-dark-400 text-sm leading-relaxed">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
                       <span
@@ -271,10 +271,15 @@ const ProjectsOverview = () => {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="text-center"
         >
-          <button className="btn-secondary group">
+          <a
+            href="https://github.com/amankas864"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary group inline-flex items-center"
+          >
             View All Projects
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

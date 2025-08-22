@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { GraduationCap, Award, Calendar, MapPin, ExternalLink } from 'lucide-react'
+import { GraduationCap, Award, Calendar, MapPin, ExternalLink, ArrowRight } from 'lucide-react'
 
 const Education = () => {
   const ref = useRef(null)
@@ -11,23 +11,33 @@ const Education = () => {
 
   const education = [
     {
-      degree: 'Master of Science in Computer Science',
-      institution: 'Stanford University',
-      period: '2021 - 2023',
-      location: 'Stanford, CA',
-      gpa: '3.9/4.0',
-      description: 'Specialized in Machine Learning and Artificial Intelligence. Completed thesis on "Advanced Neural Network Architectures for Natural Language Processing".',
-      achievements: ['Dean\'s List', 'Research Assistant', 'Graduate Teaching Assistant'],
+      degree: 'B.Tech in Computer Science and Engineering - Data Science',
+      institution: 'SRM IST-Kattankulathur',
+      period: '2021 - 2025',
+      location: 'Chennai, Tamil Nadu',
+      gpa: '8.69 CGPA',
+      description: 'Currently pursuing B.Tech in Computer Science and Engineering with Data Science specialization. Interested in placement opportunities. Maintained consistent academic performance with 0 arrears throughout the course.',
+      achievements: ['Overall CGPA: 8.69', 'Sem 1: 9.0 CGPA', 'Sem 2: 9.05 CGPA', 'Sem 3: 9.09 CGPA', 'Sem 4: 8.5 CGPA', 'Sem 5: 8.32 CGPA', 'Sem 6: 8.52 CGPA', 'Sem 7: 8.0 CGPA', 'Sem 8: 9.0 CGPA'],
       link: '#'
     },
     {
-      degree: 'Bachelor of Technology in Computer Science',
-      institution: 'MIT',
-      period: '2017 - 2021',
-      location: 'Cambridge, MA',
-      gpa: '3.8/4.0',
-      description: 'Focused on Software Engineering and Data Structures. Led multiple hackathon projects and served as President of the Computer Science Club.',
-      achievements: ['Summa Cum Laude', 'President\'s List', 'Hackathon Winner'],
+      degree: 'Class XII (Higher Secondary)',
+      institution: 'Nirmal Hr. Sec. School',
+      period: 'Jun 2019 - Mar 2020',
+      location: 'Jagdalpur, Chhattisgarh',
+      gpa: '77.6%',
+      description: 'Completed Class XII with MPC (Mathematics, Physics, Chemistry) specialization under CBSE board.',
+      achievements: ['CBSE Board', 'MPC Stream', 'Passed Out: 2020'],
+      link: '#'
+    },
+    {
+      degree: 'Class X (Secondary)',
+      institution: 'Nirmal Hr. Sec. School',
+      period: 'Jun 2017 - Apr 2018',
+      location: 'Jagdalpur, Chhattisgarh',
+      gpa: '77%',
+      description: 'Completed Class X under CBSE board with strong foundation in core subjects.',
+      achievements: ['CBSE Board', 'Passed Out: 2018'],
       link: '#'
     }
   ]
@@ -250,20 +260,13 @@ const Education = () => {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="text-center mt-16"
         >
-          <div className="inline-block p-6 bg-gradient-to-r from-primary-500/10 to-primary-600/10 border border-primary-500/20 rounded-xl">
-            <h3 className="text-xl font-semibold text-white mb-3">Continuous Learning</h3>
-            <p className="text-dark-400 mb-4">I believe in staying updated with the latest technologies and methodologies</p>
-            <div className="flex flex-wrap justify-center gap-2">
-              {['Online Courses', 'Tech Conferences', 'Open Source', 'Research Papers', 'Peer Learning'].map((item) => (
-                <span
-                  key={item}
-                  className="px-3 py-1 bg-dark-800 text-primary-400 text-sm rounded-full border border-dark-700"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
+          <a
+            href="/certificates"
+            className="btn-secondary group inline-flex items-center"
+          >
+            View All Certificates
+            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+          </a>
         </motion.div>
       </div>
     </section>

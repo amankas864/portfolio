@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Download, ArrowRight, Github, Linkedin, Instagram } from 'lucide-react'
+import Image from 'next/image'
 
 const Hero = () => {
   const handleResumeDownload = (type: 'fullstack' | 'datascience') => {
@@ -137,15 +138,15 @@ const Hero = () => {
               {/* Profile Image Container */}
               <div className="relative w-80 h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full p-2">
                 <div className="w-full h-full bg-dark-900 rounded-full overflow-hidden">
-                  {/* Placeholder for profile image */}
-                  <div className="w-full h-full bg-gradient-to-br from-dark-800 to-dark-700 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-24 h-24 lg:w-32 lg:h-32 bg-primary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span className="text-4xl lg:text-6xl font-bold text-white">A</span>
-                      </div>
-                      <p className="text-primary-400 font-medium">Profile Image</p>
-                    </div>
-                  </div>
+                  {/* Profile Image */}
+                  <Image
+                    src="/profile.png"
+                    alt="Aman Kashyap - Full-Stack Developer & Data Scientist"
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-cover object-center"
+                    priority
+                  />
                 </div>
               </div>
               

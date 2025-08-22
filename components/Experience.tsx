@@ -11,39 +11,12 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: 'Full-Stack Developer',
-      company: 'Tech Solutions Inc.',
-      period: 'Jan 2023 - Present',
-      location: 'Remote',
-      description: 'Developed and maintained multiple web applications using React, Node.js, and MongoDB. Implemented CI/CD pipelines and improved application performance by 40%.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'AWS', 'Docker'],
-      link: '#'
-    },
-    {
       title: 'Data Science Intern',
       company: 'AI Research Lab',
       period: 'Jun 2022 - Dec 2022',
-      location: 'New York, NY',
-      description: 'Built machine learning models for customer segmentation and predictive analytics. Achieved 89% accuracy in customer churn prediction using ensemble methods.',
-      technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'SQL'],
-      link: '#'
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'StartupXYZ',
-      period: 'Mar 2022 - Aug 2022',
-      location: 'San Francisco, CA',
-      description: 'Created responsive user interfaces and implemented modern design patterns. Collaborated with UX designers to improve user experience and accessibility.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Figma', 'Git'],
-      link: '#'
-    },
-    {
-      title: 'Freelance Developer',
-      company: 'Self-Employed',
-      period: 'Jan 2021 - Present',
       location: 'Remote',
-      description: 'Delivered custom web solutions for various clients. Specialized in e-commerce platforms, portfolio websites, and business applications.',
-      technologies: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe', 'Vercel'],
+      description: 'Built machine learning models for customer segmentation and predictive analytics. Achieved 89% accuracy in customer churn prediction using ensemble methods. Developed data preprocessing pipelines and feature engineering techniques. Collaborated with cross-functional teams to implement data-driven solutions.',
+      technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'SQL', 'Machine Learning', 'Data Analysis'],
       link: '#'
     }
   ]
@@ -171,27 +144,6 @@ const Experience = () => {
             ))}
           </div>
         </div>
-
-        {/* Download Resume CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mt-16"
-        >
-          <div className="inline-block p-6 bg-gradient-to-r from-primary-500/10 to-primary-600/10 border border-primary-500/20 rounded-xl">
-            <h3 className="text-xl font-semibold text-white mb-3">Want to see more details?</h3>
-            <p className="text-dark-400 mb-4">Download my detailed resume for comprehensive information</p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button className="btn-primary">
-                Download Full-Stack Resume
-              </button>
-              <button className="btn-secondary">
-                Download Data Science Resume
-              </button>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

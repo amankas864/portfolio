@@ -23,13 +23,20 @@ const Header = () => {
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
     { name: 'Education', href: '#education' },
+    { name: 'Certificates', href: '/certificates' },
     { name: 'Contact', href: '#contact' },
   ]
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    if (href.startsWith('/')) {
+      // External page link
+      window.location.href = href
+    } else {
+      // Section link on same page
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
     }
     setIsOpen(false)
   }

@@ -59,6 +59,8 @@ const Footer = () => {
                 { name: 'Skills', href: '#skills' },
                 { name: 'Projects', href: '#projects' },
                 { name: 'Experience', href: '#experience' },
+                { name: 'Education', href: '#education' },
+                { name: 'Certificates', href: '/certificates' },
                 { name: 'Contact', href: '#contact' }
               ].map((link) => (
                 <li key={link.name}>
@@ -81,23 +83,6 @@ const Footer = () => {
               <p>Location: Jagdalpur, Chhattisgarh</p>
               <p>Available for remote/full-time work</p>
             </div>
-            <div className="pt-4">
-              <h4 className="text-sm font-semibold text-primary-400 mb-2">Resume Downloads</h4>
-              <div className="space-y-2">
-                <a
-                  href="#"
-                  className="block text-sm text-dark-400 hover:text-primary-400 transition-colors duration-300"
-                >
-                  Full-Stack Developer Resume
-                </a>
-                <a
-                  href="#"
-                  className="block text-sm text-dark-400 hover:text-primary-400 transition-colors duration-300"
-                >
-                  Data Science Resume
-                </a>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -108,14 +93,6 @@ const Footer = () => {
           </p>
           
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-dark-400 hover:text-primary-400 transition-colors duration-300 text-sm"
-            >
-              Naukri.com Profile
-            </a>
             <a
               href="https://leetcode.com/u/amankas864/"
               target="_blank"
