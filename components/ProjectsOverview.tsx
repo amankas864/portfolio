@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { ExternalLink, Github, ArrowRight, Code, Brain } from 'lucide-react'
+import Image from 'next/image'
 
 const ProjectsOverview = () => {
   const ref = useRef(null)
@@ -13,7 +14,7 @@ const ProjectsOverview = () => {
     {
       title: 'Dionysus - Github Repository Tool',
       description: 'Advanced GitHub repository management and analysis tool with comprehensive features for developers and teams.',
-      image: '/api/placeholder/400/250',
+      image: '/dionysus.png',
       tech: ['React', 'Node.js', 'GitHub API', 'JavaScript', 'Express'],
       liveUrl: '#',
       githubUrl: 'https://github.com/amankas864/dionysus',
@@ -22,7 +23,7 @@ const ProjectsOverview = () => {
     {
       title: 'Brainstack - Education Platform',
       description: 'Comprehensive online education platform designed to enhance learning experiences with interactive features.',
-      image: '/api/placeholder/400/250',
+      image: '/brainstack.png',
       tech: ['React', 'Node.js', 'MongoDB', 'Express', 'JavaScript'],
       liveUrl: 'https://www.brainstackeducation.in',
       githubUrl: '#',
@@ -31,7 +32,7 @@ const ProjectsOverview = () => {
     {
       title: 'R-Cart',
       description: 'Modern e-commerce shopping cart application with user-friendly interface and seamless shopping experience.',
-      image: '/api/placeholder/400/250',
+      image: '/r-cart.png',
       tech: ['React', 'JavaScript', 'CSS', 'HTML', 'Local Storage'],
       liveUrl: '#',
       githubUrl: 'https://github.com/amankas864/R-Cart',
@@ -133,9 +134,13 @@ const ProjectsOverview = () => {
                 className="card group cursor-pointer"
               >
                 <div className="relative overflow-hidden rounded-lg mb-4">
-                  <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                    <span className="text-primary-500 font-medium">Project Preview</span>
-                  </div>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={400}
+                    height={250}
+                    className="w-full h-48 object-cover"
+                  />
                   <div className="absolute inset-0 bg-primary-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
@@ -202,13 +207,6 @@ const ProjectsOverview = () => {
                 whileHover={{ y: -10 }}
                 className="card group cursor-pointer"
               >
-                <div className="relative overflow-hidden rounded-lg mb-4">
-                  <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                    <span className="text-primary-500 font-medium">Project Preview</span>
-                  </div>
-                  <div className="absolute inset-0 bg-primary-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-primary-400 font-medium">{project.category}</span>

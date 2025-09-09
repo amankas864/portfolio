@@ -13,144 +13,40 @@ const CertificatesPage = () => {
 
   const certificates = [
     {
-      name: 'Aman Kashyap IBI',
+      name: 'IBI',
       issuer: 'IBI',
       date: '2023',
-      credentialId: 'IBI-CERT-001',
       description: 'Professional certification from IBI institute.',
       category: 'Professional',
       filename: 'Aman Kashyap IBI.pdf',
       type: 'pdf'
     },
     {
-      name: 'Certificate',
-      issuer: 'Professional Institute',
+      name: '100xDevs',
+      issuer: '100xDevs',
       date: '2023',
-      credentialId: 'CERT-002',
-      description: 'Professional certification achievement.',
-      category: 'Professional',
+      description: 'Full-stack development certification from 100xDevs.',
+      category: 'Full-Stack Development',
       filename: 'certificate.png',
       type: 'image'
     },
     {
-      name: 'Coursera Machine Learning',
-      issuer: 'Coursera',
+      name: 'AWS Cloud Practitioner',
+      issuer: 'AWS',
       date: '2023',
-      credentialId: 'UC-7fa4b438-ad16-4662-afe1-cc2672c17907',
-      description: 'Machine Learning specialization course completion.',
-      category: 'Machine Learning',
-      filename: 'UC-7fa4b438-ad16-4662-afe1-cc2672c17907.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'Coursera Data Science',
-      issuer: 'Coursera',
-      date: '2023',
-      credentialId: 'WZENJKQ4PFTM',
-      description: 'Data Science course completion certificate.',
-      category: 'Data Science',
-      filename: 'Coursera WZENJKQ4PFTM.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'Coursera Programming',
-      issuer: 'Coursera',
-      date: '2023',
-      credentialId: 'FRZAVB9RE5RZ',
-      description: 'Programming fundamentals course completion.',
-      category: 'Programming',
-      filename: 'Coursera FRZAVB9RE5RZ.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'Python SoloLearn',
-      issuer: 'SoloLearn',
-      date: '2023',
-      credentialId: 'PYTHON-SL-001',
-      description: 'Python programming course completion.',
-      category: 'Programming',
-      filename: 'Python Solo learn.png',
-      type: 'image'
-    },
-    {
-      name: 'Object Oriented Programming',
-      issuer: 'Professional Institute',
-      date: '2023',
-      credentialId: 'OOPS-001',
-      description: 'Object Oriented Programming Basic level certification.',
-      category: 'Programming',
-      filename: 'OOPS Basic level.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'Networking Basics',
-      issuer: 'Professional Institute',
-      date: '2023',
-      credentialId: 'NET-001',
-      description: 'Networking fundamentals certification.',
-      category: 'Networking',
-      filename: 'Networking_Basics_Badge.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'JavaScript SoloLearn',
-      issuer: 'SoloLearn',
-      date: '2023',
-      credentialId: 'JS-SL-001',
-      description: 'JavaScript programming course completion.',
-      category: 'Programming',
-      filename: 'JS Solo learn.png',
-      type: 'image'
-    },
-    {
-      name: 'C Programming Professional',
-      issuer: 'Professional Institute',
-      date: '2023',
-      credentialId: 'C-PRO-001',
-      description: 'C Programming Professional level certification.',
-      category: 'Programming',
-      filename: 'C Professional level.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'Coursera Advanced Course',
-      issuer: 'Coursera',
-      date: '2023',
-      credentialId: '2BDRUZU6223K',
-      description: 'Advanced course completion certificate.',
-      category: 'Advanced',
-      filename: 'Coursera 2BDRUZU6223K.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'C++ SoloLearn',
-      issuer: 'SoloLearn',
-      date: '2023',
-      credentialId: 'CPP-SL-001',
-      description: 'C++ programming course completion.',
-      category: 'Programming',
-      filename: 'C++ Solo learn.png',
-      type: 'image'
-    },
-    {
-      name: 'AWS Machine Learning Foundations',
-      issuer: 'AWS Academy',
-      date: '2023',
-      credentialId: 'AWS-ML-001',
-      description: 'AWS Academy Machine Learning Foundations certification.',
+      description: 'AWS Cloud Practitioner certification.',
       category: 'Cloud Computing',
       filename: 'AWS_Academy_Machine_Learning_Foundations_Badge.pdf',
       type: 'pdf'
     },
     {
-      name: 'Android Development',
-      issuer: 'Udemy',
+      name: 'GKE Certificate',
+      issuer: 'Google Cloud',
       date: '2023',
-      credentialId: 'ANDROID-UDEMY-001',
-      description: 'Android development course completion.',
-      category: 'Mobile Development',
-      filename: 'Android Udemy.jpg',
-      type: 'image'
+      description: 'Google Kubernetes Engine certification.',
+      category: 'Cloud Computing',
+      filename: 'UC-7fa4b438-ad16-4662-afe1-cc2672c17907.pdf',
+      type: 'pdf'
     }
   ]
 
@@ -184,13 +80,17 @@ const CertificatesPage = () => {
   }
 
   return (
-    <main className="min-h-screen bg-dark-950">
+    <main className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary)' }}>
       {/* Header */}
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-dark-950/90 backdrop-blur-custom border-b border-dark-800"
+        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-custom border-b"
+        style={{
+          backgroundColor: 'var(--bg-primary)',
+          borderBottomColor: 'var(--border-light)'
+        }}
       >
         <div className="container-custom">
           <div className="flex items-center justify-between h-16 lg:h-20">
@@ -198,15 +98,15 @@ const CertificatesPage = () => {
               href="/"
               className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300"
             >
-              <ArrowLeft className="text-white" size={20} />
-              <span className="text-white font-medium">Back to Portfolio</span>
+              <ArrowLeft size={20} style={{ color: 'var(--text-secondary)' }} />
+              <span className="font-medium" style={{ color: 'var(--text-secondary)' }}>Back to Portfolio</span>
             </Link>
             
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">A</span>
               </div>
-              <span className="text-xl lg:text-2xl font-bold text-white">
+              <span className="text-xl lg:text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>
                 Aman Kashyap
               </span>
             </div>
@@ -226,13 +126,15 @@ const CertificatesPage = () => {
           >
             <motion.h1
               variants={itemVariants}
-              className="text-4xl lg:text-5xl font-bold text-white mb-4"
+              className="text-4xl lg:text-5xl font-bold mb-4"
+              style={{ color: 'var(--text-primary)' }}
             >
               Professional Certificates
             </motion.h1>
             <motion.p
               variants={itemVariants}
-              className="text-xl text-dark-400 max-w-2xl mx-auto"
+              className="text-xl max-w-2xl mx-auto"
+              style={{ color: 'var(--text-secondary)' }}
             >
               My professional certifications and achievements in technology and data science
             </motion.p>
@@ -257,7 +159,7 @@ const CertificatesPage = () => {
                 <div className="space-y-4">
                   {/* Certificate Image/Thumbnail */}
                   <div className="relative overflow-hidden rounded-lg">
-                    <div className="w-full h-48 bg-gradient-to-br from-dark-800 to-dark-700 flex items-center justify-center">
+                    <div className="w-full h-48 flex items-center justify-center" style={{ backgroundColor: 'var(--bg-card)' }}>
                       {isImageFile(cert.filename) ? (
                         <Image
                           src={`/certificates/${cert.filename}`}
@@ -283,44 +185,53 @@ const CertificatesPage = () => {
                   <div className="space-y-4">
                     <div className="flex items-start justify-between">
                       <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-primary-400 transition-colors duration-300">
+                        <h3 className="text-xl font-bold group-hover:text-primary-500 transition-colors duration-300" style={{ color: 'var(--text-primary)' }}>
                           {cert.name}
                         </h3>
-                        <p className="text-primary-400 font-medium">{cert.issuer}</p>
+                        <p className="font-medium" style={{ color: 'var(--accent-primary)' }}>{cert.issuer}</p>
                       </div>
                       <div className="flex space-x-2">
                         <a
                           href={`/certificates/${cert.filename}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-300"
+                          className="p-2 transition-colors duration-300"
+                          style={{ color: 'var(--text-secondary)' }}
+                          onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'var(--accent-primary)'}
+                          onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
                         >
                           <ExternalLink size={18} />
                         </a>
                         <a
                           href={`/certificates/${cert.filename}`}
                           download
-                          className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-300"
+                          className="p-2 transition-colors duration-300"
+                          style={{ color: 'var(--text-secondary)' }}
+                          onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'var(--accent-primary)'}
+                          onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
                         >
                           <Download size={18} />
                         </a>
                       </div>
                     </div>
 
-                    <p className="text-dark-300 leading-relaxed">
+                    <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                       {cert.description}
                     </p>
 
-                    <div className="flex items-center justify-between text-sm text-dark-400">
+                    <div className="flex items-center justify-between text-sm" style={{ color: 'var(--text-secondary)' }}>
                       <div className="flex items-center space-x-1">
                         <Calendar size={14} />
                         <span>Issued: {cert.date}</span>
                       </div>
-                      <span className="font-mono text-xs">ID: {cert.credentialId}</span>
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <span className="px-3 py-1 bg-dark-800 text-primary-400 text-xs rounded-full border border-dark-700">
+                      <span className="px-3 py-1 text-xs rounded-full border" style={{ 
+                        backgroundColor: 'var(--bg-hover)', 
+                        color: 'var(--accent-primary)', 
+                        borderColor: 'var(--border-light)' 
+                      }}>
                         {cert.category}
                       </span>
                       <div className="flex items-center space-x-2">
@@ -330,7 +241,7 @@ const CertificatesPage = () => {
                         {isPdfFile(cert.filename) && (
                           <FileText className="text-primary-400" size={16} />
                         )}
-                        <div className="w-16 bg-dark-800 rounded-full h-1">
+                        <div className="w-16 rounded-full h-1" style={{ backgroundColor: 'var(--bg-hover)' }}>
                           <div className="bg-gradient-to-r from-primary-500 to-primary-600 h-1 rounded-full w-full"></div>
                         </div>
                       </div>

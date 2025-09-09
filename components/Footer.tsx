@@ -16,7 +16,10 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-dark-950 border-t border-dark-800">
+    <footer className="border-t" style={{ 
+      backgroundColor: 'var(--bg-secondary)', 
+      borderTopColor: 'var(--border-light)' 
+    }}>
       <div className="container-custom py-12">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
@@ -25,9 +28,9 @@ const Footer = () => {
               <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">A</span>
               </div>
-              <span className="text-xl font-bold text-white">Aman Kashyap</span>
+              <span className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>Aman Kashyap</span>
             </div>
-            <p className="text-dark-400 max-w-xs">
+            <p className="max-w-xs" style={{ color: 'var(--text-secondary)' }}>
               Full-Stack Developer & Data Scientist passionate about creating innovative solutions 
               and extracting meaningful insights from data.
             </p>
@@ -40,7 +43,20 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 bg-dark-800 border border-dark-700 rounded-lg flex items-center justify-center text-dark-400 hover:text-primary-400 hover:border-primary-500 transition-all duration-300"
+                  className="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300"
+                  style={{
+                    backgroundColor: 'var(--bg-card)',
+                    border: '1px solid var(--border-light)',
+                    color: 'var(--text-secondary)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = 'var(--accent-primary)';
+                    e.currentTarget.style.borderColor = 'var(--border-accent)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = 'var(--text-secondary)';
+                    e.currentTarget.style.borderColor = 'var(--border-light)';
+                  }}
                   aria-label={social.label}
                 >
                   <social.icon size={20} />
@@ -51,7 +67,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Quick Links</h3>
+            <h3 className="text-lg font-semibold" style={{ color: 'var(--text-primary)' }}>Quick Links</h3>
             <ul className="space-y-2">
               {[
                 { name: 'Home', href: '#home' },
@@ -66,7 +82,10 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-dark-400 hover:text-primary-400 transition-colors duration-300"
+                    className="transition-colors duration-300"
+                    style={{ color: 'var(--text-secondary)' }}
+                    onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'var(--accent-primary)'}
+                    onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
                   >
                     {link.name}
                   </a>
@@ -77,18 +96,18 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Contact Info</h3>
-            <div className="space-y-2 text-dark-400">
+            <h3 className="text-lg font-semibold" style={{ color: 'var(--text-primary)' }}>Contact Info</h3>
+            <div className="space-y-2" style={{ color: 'var(--text-secondary)' }}>
               <p>Email: devaman0110@gmail.com</p>
-              <p>Location: Jagdalpur, Chhattisgarh</p>
+              <p>Location: Bangalore, Karnataka</p>
               <p>Available for remote/full-time work</p>
             </div>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="pt-8 border-t border-dark-800 flex flex-col md:flex-row items-center justify-between">
-          <p className="text-dark-400 text-sm">
+        <div className="pt-8 border-t flex flex-col md:flex-row items-center justify-between" style={{ borderTopColor: 'var(--border-light)' }}>
+          <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
             © 2024 Aman Kashyap. All rights reserved.
           </p>
           
@@ -97,7 +116,10 @@ const Footer = () => {
               href="https://leetcode.com/u/amankas864/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-dark-400 hover:text-primary-400 transition-colors duration-300 text-sm"
+              className="transition-colors duration-300 text-sm"
+              style={{ color: 'var(--text-secondary)' }}
+              onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'var(--accent-primary)'}
+              onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
             >
               LeetCode Profile
             </a>

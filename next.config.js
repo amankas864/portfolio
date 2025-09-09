@@ -2,7 +2,10 @@
 const nextConfig = {
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
+    unoptimized: true,
   },
+  trailingSlash: true,
+  output: 'export',
 }
 
 module.exports = nextConfig

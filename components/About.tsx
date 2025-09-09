@@ -10,9 +10,9 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   const stats = [
-    { icon: Users, value: '50+', label: 'Projects Completed' },
-    { icon: Award, value: '95%', label: 'Client Satisfaction' },
-    { icon: Clock, value: '3+', label: 'Years Experience' },
+    { icon: Users, value: '15+', label: 'Projects Completed' },
+    { icon: Award, value: '95%~', label: 'Certified Score' },
+    { icon: Clock, value: '24/7', label: 'Time Management' },
     { icon: TrendingUp, value: '100%', label: 'Success Rate' },
   ]
 

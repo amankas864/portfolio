@@ -83,8 +83,8 @@ const Header = () => {
                 style={{ 
                   color: 'var(--text-secondary)',
                 }}
-                onMouseEnter={(e) => e.target.style.color = 'var(--accent-primary)'}
-                onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
+                onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'var(--accent-primary)'}
+                onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
               >
                 {item.name}
               </motion.button>
@@ -96,8 +96,8 @@ const Header = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 transition-colors duration-300"
             style={{ color: 'var(--text-secondary)' }}
-            onMouseEnter={(e) => e.target.style.color = 'var(--accent-primary)'}
-            onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
+            onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'var(--accent-primary)'}
+            onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -125,12 +125,14 @@ const Header = () => {
                     className="block w-full text-left px-4 py-2 transition-all duration-300"
                     style={{ color: 'var(--text-secondary)' }}
                     onMouseEnter={(e) => {
-                      e.target.style.color = 'var(--accent-primary)';
-                      e.target.style.backgroundColor = 'var(--bg-hover)';
+                      const target = e.target as HTMLElement;
+                      target.style.color = 'var(--accent-primary)';
+                      target.style.backgroundColor = 'var(--bg-hover)';
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.color = 'var(--text-secondary)';
-                      e.target.style.backgroundColor = 'transparent';
+                      const target = e.target as HTMLElement;
+                      target.style.color = 'var(--text-secondary)';
+                      target.style.backgroundColor = 'transparent';
                     }}
                   >
                     {item.name}
