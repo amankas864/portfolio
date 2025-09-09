@@ -9,22 +9,42 @@ const Skills = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
-  const fullStackSkills = [
-    { name: 'React.js', level: 90, icon: Code },
-    { name: 'Node.js', level: 85, icon: Server },
-    { name: 'JavaScript/TypeScript', level: 88, icon: Code },
-    { name: 'HTML/CSS', level: 92, icon: Globe },
-    { name: 'MongoDB', level: 80, icon: Database },
-    { name: 'Express.js', level: 82, icon: Server },
+  const fullStackTech = [
+    { name: 'Next.js', icon: '⚛️' },
+    { name: 'TypeScript', icon: '🔷' },
+    { name: 'Node.js', icon: '🟢' },
+    { name: 'Tailwind CSS', icon: '🎨' },
+    { name: 'MongoDB', icon: '🍃' },
+    { name: 'PostgreSQL', icon: '🐘' },
+    { name: 'Express.js', icon: '🚀' },
+    { name: 'Redis', icon: '🔴' },
+    { name: 'Recoil', icon: '⚛️' },
+    { name: 'Kafka', icon: '📡' },
+    { name: 'Git', icon: '📝' },
+    { name: 'Docker', icon: '🐳' },
+    { name: 'Kubernetes', icon: '☸️' },
+    { name: 'AWS', icon: '☁️' },
+    { name: 'Firebase', icon: '🔥' },
+    { name: 'Ansible', icon: '🔧' },
+    { name: 'Terraform', icon: '🏗️' },
   ]
 
-  const dataScienceSkills = [
-    { name: 'Python', level: 88, icon: Brain },
-    { name: 'Machine Learning', level: 85, icon: Brain },
-    { name: 'Data Analysis', level: 90, icon: BarChart3 },
-    { name: 'SQL', level: 85, icon: Database },
-    { name: 'Deep Learning', level: 80, icon: Brain },
-    { name: 'Statistics', level: 87, icon: BarChart3 },
+  const dataScienceTech = [
+    { name: 'Python', icon: '🐍' },
+    { name: 'C', icon: '⚙️' },
+    { name: 'C++', icon: '⚡' },
+    { name: 'R', icon: '📊' },
+    { name: 'Machine Learning', icon: '🤖' },
+    { name: 'Data Science', icon: '📈' },
+    { name: 'MySQL', icon: '🗄️' },
+    { name: 'TensorFlow', icon: '🧠' },
+    { name: 'PyTorch', icon: '🔥' },
+    { name: 'Seaborn', icon: '📊' },
+    { name: 'Pandas', icon: '🐼' },
+    { name: 'NumPy', icon: '🔢' },
+    { name: 'Django', icon: '🎯' },
+    { name: 'NLTK', icon: '📝' },
+    { name: 'Arch Linux', icon: '🐧', isSpecial: true },
   ]
 
   const containerVariants = {
@@ -43,7 +63,9 @@ const Skills = () => {
   }
 
   return (
-    <section id="skills" className="section-padding bg-dark-900">
+
+
+    <section id="skills" className="section-padding" style={{ backgroundColor: 'var(--bg-secondary)' }}>
       <div className="container-custom">
         <motion.div
           ref={ref}
@@ -54,20 +76,22 @@ const Skills = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl lg:text-5xl font-bold text-white mb-4"
+            className="text-4xl lg:text-5xl font-bold mb-4"
+            style={{ color: 'var(--text-primary)' }}
           >
             Skills & Expertise
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-dark-400 max-w-2xl mx-auto"
+            className="text-xl max-w-2xl mx-auto"
+            style={{ color: 'var(--text-secondary)' }}
           >
             Combining modern web technologies with advanced data science techniques
           </motion.p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Full-Stack Development Skills */}
+          {/* Full-Stack Development Technologies */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -78,39 +102,45 @@ const Skills = () => {
               <div className="w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center">
                 <Code className="text-white" size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-white">Full-Stack Development</h3>
+              <h3 className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>Full-Stack Development</h3>
             </div>
             
-            <div className="space-y-6">
-              {fullStackSkills.map((skill, index) => (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+              {fullStackTech.map((tech, index) => (
                 <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="space-y-2"
+                  key={tech.name}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="rounded-lg p-3 sm:p-4 text-center transition-all duration-300 group"
+                  style={{
+                    backgroundColor: 'var(--bg-card)',
+                    border: '1px solid var(--border-light)',
+                    boxShadow: '0 4px 6px -1px var(--shadow-light), 0 2px 4px -1px var(--shadow-medium)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = 'var(--border-accent)';
+                    e.currentTarget.style.backgroundColor = 'var(--bg-hover)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = 'var(--border-light)';
+                    e.currentTarget.style.backgroundColor = 'var(--bg-card)';
+                  }}
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <skill.icon className="text-primary-400" size={20} />
-                      <span className="text-white font-medium">{skill.name}</span>
-                    </div>
-                    <span className="text-primary-400 font-semibold">{skill.level}%</span>
-                  </div>
-                  <div className="skill-bar">
-                    <motion.div
-                      className="skill-progress"
-                      initial={{ width: 0 }}
-                      animate={isInView ? { width: `${skill.level}%` } : { width: 0 }}
-                      transition={{ duration: 1.5, delay: index * 0.1 + 0.5 }}
-                    />
-                  </div>
+                  <div className="text-2xl sm:text-3xl mb-1 sm:mb-2">{tech.icon}</div>
+                  <span 
+                    className="text-xs sm:text-sm font-medium transition-colors duration-300"
+                    style={{ color: 'var(--text-secondary)' }}
+                  >
+                    {tech.name}
+                  </span>
                 </motion.div>
               ))}
             </div>
           </motion.div>
 
-          {/* Data Science Skills */}
+          {/* Data Science Technologies */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
@@ -121,67 +151,49 @@ const Skills = () => {
               <div className="w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center">
                 <Brain className="text-white" size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-white">Data Science & ML</h3>
+              <h3 className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>Data Science & ML</h3>
             </div>
             
-            <div className="space-y-6">
-              {dataScienceSkills.map((skill, index) => (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+              {dataScienceTech.map((tech, index) => (
                 <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="space-y-2"
+                  key={tech.name}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className={`rounded-lg p-3 sm:p-4 text-center transition-all duration-300 group ${
+                    tech.isSpecial ? 'p-4 sm:p-6' : ''
+                  }`}
+                  style={{
+                    backgroundColor: 'var(--bg-card)',
+                    border: '1px solid var(--border-light)',
+                    boxShadow: '0 4px 6px -1px var(--shadow-light), 0 2px 4px -1px var(--shadow-medium)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = 'var(--border-accent)';
+                    e.currentTarget.style.backgroundColor = 'var(--bg-hover)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = 'var(--border-light)';
+                    e.currentTarget.style.backgroundColor = 'var(--bg-card)';
+                  }}
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <skill.icon className="text-primary-400" size={20} />
-                      <span className="text-white font-medium">{skill.name}</span>
-                    </div>
-                    <span className="text-primary-400 font-semibold">{skill.level}%</span>
+                  <div className={`mb-1 sm:mb-2 ${tech.isSpecial ? 'text-4xl sm:text-5xl' : 'text-2xl sm:text-3xl'}`}>
+                    {tech.icon}
                   </div>
-                  <div className="skill-bar">
-                    <motion.div
-                      className="skill-progress"
-                      initial={{ width: 0 }}
-                      animate={isInView ? { width: `${skill.level}%` } : { width: 0 }}
-                      transition={{ duration: 1.5, delay: index * 0.1 + 0.5 }}
-                    />
-                  </div>
+                  <span 
+                    className="text-xs sm:text-sm font-medium transition-colors duration-300"
+                    style={{ color: 'var(--text-secondary)' }}
+                  >
+                    {tech.name}
+                  </span>
                 </motion.div>
               ))}
             </div>
           </motion.div>
         </div>
 
-        {/* Additional Skills Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-16"
-        >
-          <h3 className="text-2xl font-bold text-white text-center mb-8">Tools & Technologies</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {[
-              'Git', 'Docker', 'AWS', 'Firebase', 'PostgreSQL', 'Redis',
-              'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'Jupyter',
-              'Next.js', 'Tailwind CSS', 'GraphQL', 'REST APIs', 'Webpack', 'Vite'
-            ].map((tool, index) => (
-              <motion.div
-                key={tool}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="bg-dark-800 border border-dark-700 rounded-lg p-4 text-center hover:border-primary-500 transition-all duration-300 group"
-              >
-                <span className="text-dark-300 group-hover:text-primary-400 transition-colors duration-300 font-medium">
-                  {tool}
-                </span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   )

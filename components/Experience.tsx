@@ -12,8 +12,8 @@ const Experience = () => {
   const experiences = [
     {
       title: 'Data Science Intern',
-      company: 'AI Research Lab',
-      period: 'Jun 2022 - Dec 2022',
+      company: 'InfoBharatIntern',
+      period: 'Jun 2025 - July 2025',
       location: 'Remote',
       description: 'Built machine learning models for customer segmentation and predictive analytics. Achieved 89% accuracy in customer churn prediction using ensemble methods. Developed data preprocessing pipelines and feature engineering techniques. Collaborated with cross-functional teams to implement data-driven solutions.',
       technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'SQL', 'Machine Learning', 'Data Analysis'],
@@ -48,19 +48,19 @@ const Experience = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl lg:text-5xl font-bold text-white mb-4"
+            className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
           >
             Work Experience
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-dark-400 max-w-2xl mx-auto"
+            className="text-xl text-gray-600 max-w-2xl mx-auto"
           >
             My professional journey in technology and data science
           </motion.p>
         </motion.div>
 
-        <div className="relative">
+        <div className="relative max-w-4xl mx-auto">
           {/* Timeline Line */}
           <div className="absolute left-4 lg:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 via-primary-400 to-primary-300 transform lg:-translate-x-1/2"></div>
 
@@ -91,26 +91,26 @@ const Experience = () => {
                       {/* Header */}
                       <div className="flex items-start justify-between">
                         <div>
-                          <h3 className="text-xl font-bold text-white group-hover:text-primary-400 transition-colors duration-300">
+                          <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary-500 transition-colors duration-300">
                             {experience.title}
                           </h3>
                           <div className="flex items-center space-x-2 mt-1">
-                            <Briefcase className="text-primary-400" size={16} />
-                            <span className="text-primary-400 font-medium">{experience.company}</span>
+                            <Briefcase className="text-primary-500" size={16} />
+                            <span className="text-primary-500 font-medium">{experience.company}</span>
                           </div>
                         </div>
                         <a
                           href={experience.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-300"
+                          className="p-2 text-gray-500 hover:text-primary-500 transition-colors duration-300"
                         >
                           <ExternalLink size={18} />
                         </a>
                       </div>
 
                       {/* Period & Location */}
-                      <div className="flex items-center space-x-4 text-sm text-dark-400">
+                      <div className="flex items-center space-x-4 text-sm text-gray-600">
                         <div className="flex items-center space-x-1">
                           <Calendar size={14} />
                           <span>{experience.period}</span>
@@ -122,7 +122,7 @@ const Experience = () => {
                       </div>
 
                       {/* Description */}
-                      <p className="text-dark-300 leading-relaxed">
+                      <p className="text-gray-700 leading-relaxed">
                         {experience.description}
                       </p>
 
@@ -131,7 +131,7 @@ const Experience = () => {
                         {experience.technologies.map((tech) => (
                           <span
                             key={tech}
-                            className="px-3 py-1 bg-dark-800 text-primary-400 text-xs rounded-full border border-dark-700"
+                            className="px-3 py-1 bg-gray-100 text-primary-500 text-xs rounded-full border border-gray-200"
                           >
                             {tech}
                           </span>

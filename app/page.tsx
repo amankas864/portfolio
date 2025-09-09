@@ -13,7 +13,7 @@ import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-dark-950">
+    <main className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary)' }}>
       <Header />
       
       <motion.div
@@ -22,9 +22,9 @@ export default function Home() {
         transition={{ duration: 0.6 }}
       >
         <Hero />
+        <About />
         <Skills />
         <ProjectsOverview />
-        <About />
         <Experience />
         <Education />
         <Contact />

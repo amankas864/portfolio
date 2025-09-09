@@ -1,0 +1,76 @@
+/* Custom Color Scheme for Portfolio */
+:root {
+  /* Background Colors */
+  --bg-primary: #fafafa; /* Off-white background */
+  --bg-secondary: #f5f3ff; /* Very light purple */
+  --bg-card: #f8f6ff; /* Light purple cards */
+  --bg-hover: #f0ecff; /* Slightly darker purple for hover */
+  
+  /* Text Colors */
+  --text-primary: #1f2937; /* Dark gray for main text */
+  --text-secondary: #6b7280; /* Medium gray for secondary text */
+  --text-muted: #9ca3af; /* Light gray for muted text */
+  
+  /* Accent Colors */
+  --accent-primary: #a855f7; /* Purple */
+  --accent-secondary: #ec4899; /* Pink */
+  --accent-hover: #9333ea; /* Darker purple for hover */
+  
+  /* Border Colors */
+  --border-light: #e5e7eb; /* Light gray borders */
+  --border-medium: #d1d5db; /* Medium gray borders */
+  --border-accent: #c084fc; /* Purple borders */
+  
+  /* Shadow Colors */
+  --shadow-light: rgba(168, 85, 247, 0.1);
+  --shadow-medium: rgba(168, 85, 247, 0.15);
+}
+
+/* Apply color scheme to components */
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.bg-card {
+  background-color: var(--bg-card);
+}
+
+.bg-hover {
+  background-color: var(--bg-hover);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-accent {
+  color: var(--accent-primary);
+}
+
+.border-light {
+  border-color: var(--border-light);
+}
+
+.border-medium {
+  border-color: var(--border-medium);
+}
+
+.border-accent {
+  border-color: var(--border-accent);
+}
+
+.shadow-custom {
+  box-shadow: 0 4px 6px -1px var(--shadow-light), 0 2px 4px -1px var(--shadow-medium);
+}

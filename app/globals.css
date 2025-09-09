@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import '../styles/colors.css';
 
 @layer base {
   html {
@@ -10,7 +11,9 @@
   }
   
   body {
-    @apply bg-dark-950 text-white font-sans;
+    @apply font-sans;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -24,11 +27,18 @@
   }
   
   .btn-secondary {
-    @apply border-2 border-white text-white hover:bg-white hover:text-dark-950 font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+    @apply font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+    border: 2px solid var(--border-medium);
+    color: var(--text-secondary);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
   }
   
   .section-padding {
-    @apply py-20 px-4 sm:px-6 lg:px-8;
+    @apply py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8;
   }
   
   .container-custom {
@@ -40,7 +50,15 @@
   }
   
   .card {
-    @apply bg-dark-900 border border-dark-800 rounded-xl p-6 hover:border-primary-500 transition-all duration-300;
+    @apply rounded-xl p-6 transition-all duration-300;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 4px 6px -1px var(--shadow-light), 0 2px 4px -1px var(--shadow-medium);
+  }
+  
+  .card:hover {
+    border-color: var(--border-accent);
+    background-color: var(--bg-hover);
   }
   
   .skill-bar {

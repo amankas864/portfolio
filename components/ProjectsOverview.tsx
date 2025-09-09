@@ -41,15 +41,6 @@ const ProjectsOverview = () => {
 
   const dataScienceProjects = [
     {
-      title: 'Dionysus - Github Repository Tool',
-      description: 'Data-driven GitHub repository analysis tool with machine learning capabilities for repository insights and metrics.',
-      image: '/api/placeholder/400/250',
-      tech: ['Python', 'Machine Learning', 'GitHub API', 'Data Analysis', 'Pandas'],
-      liveUrl: '#',
-      githubUrl: 'https://github.com/amankas864/dionysus',
-      category: 'Data Science'
-    },
-    {
       title: 'Sentiment Analysis Using BERT',
       description: 'Advanced sentiment analysis model leveraging BERT transformers for accurate text classification and emotion detection.',
       image: '/api/placeholder/400/250',
@@ -63,8 +54,17 @@ const ProjectsOverview = () => {
       description: 'Intelligent energy management system using fuzzy logic for optimized energy distribution and consumption analysis.',
       image: '/api/placeholder/400/250',
       tech: ['Python', 'Fuzzy Logic', 'Energy Systems', 'Optimization', 'NumPy'],
-      liveUrl: '#',
+      liveUrl: 'https://github.com/surajverma1923/FUZZY-ENERGY-SYSTEM',
       githubUrl: 'https://github.com/surajverma1923/FUZZY-ENERGY-SYSTEM',
+      category: 'Data Science'
+    },
+    {
+      title: 'Machine Learning Project',
+      description: 'Advanced machine learning project showcasing various algorithms and data analysis techniques.',
+      image: '/api/placeholder/400/250',
+      tech: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib'],
+      liveUrl: '#',
+      githubUrl: '#',
       category: 'Data Science'
     }
   ]
@@ -96,13 +96,13 @@ const ProjectsOverview = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl lg:text-5xl font-bold text-white mb-4"
+            className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
           >
             Featured Projects
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-dark-400 max-w-2xl mx-auto"
+            className="text-xl text-gray-600 max-w-2xl mx-auto"
           >
             Showcasing my work in both Full-Stack Development and Data Science
           </motion.p>
@@ -119,7 +119,7 @@ const ProjectsOverview = () => {
             <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
               <Code className="text-white" size={20} />
             </div>
-            <h3 className="text-3xl font-bold text-white">Full-Stack Development</h3>
+            <h3 className="text-3xl font-bold text-gray-900">Full-Stack Development</h3>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -133,8 +133,8 @@ const ProjectsOverview = () => {
                 className="card group cursor-pointer"
               >
                 <div className="relative overflow-hidden rounded-lg mb-4">
-                  <div className="w-full h-48 bg-gradient-to-br from-dark-800 to-dark-700 flex items-center justify-center">
-                    <span className="text-primary-400 font-medium">Project Preview</span>
+                  <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                    <span className="text-primary-500 font-medium">Project Preview</span>
                   </div>
                   <div className="absolute inset-0 bg-primary-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
@@ -144,29 +144,21 @@ const ProjectsOverview = () => {
                     <span className="text-sm text-primary-400 font-medium">{project.category}</span>
                     <div className="flex space-x-2">
                       <a
-                        href={project.githubUrl}
+                        href={project.liveUrl !== '#' ? project.liveUrl : project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-300"
                       >
-                        <Github size={18} />
-                      </a>
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-300"
-                      >
-                        <ExternalLink size={18} />
+                        {project.liveUrl !== '#' ? <ExternalLink size={18} /> : <Github size={18} />}
                       </a>
                     </div>
                   </div>
 
-                  <h4 className="text-xl font-bold text-white group-hover:text-primary-400 transition-colors duration-300">
+                  <h4 className="text-xl font-bold text-gray-900 group-hover:text-primary-500 transition-colors duration-300">
                     {project.title}
                   </h4>
 
-                  <p className="text-dark-400 text-sm leading-relaxed">
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {project.description}
                   </p>
 
@@ -174,7 +166,7 @@ const ProjectsOverview = () => {
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-dark-800 text-dark-300 text-xs rounded-full border border-dark-700"
+                        className="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full border border-gray-200"
                       >
                         {tech}
                       </span>
@@ -197,7 +189,7 @@ const ProjectsOverview = () => {
             <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
               <Brain className="text-white" size={20} />
             </div>
-            <h3 className="text-3xl font-bold text-white">Data Science & ML</h3>
+            <h3 className="text-3xl font-bold text-gray-900">Data Science & ML</h3>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -211,8 +203,8 @@ const ProjectsOverview = () => {
                 className="card group cursor-pointer"
               >
                 <div className="relative overflow-hidden rounded-lg mb-4">
-                  <div className="w-full h-48 bg-gradient-to-br from-dark-800 to-dark-700 flex items-center justify-center">
-                    <span className="text-primary-400 font-medium">Project Preview</span>
+                  <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                    <span className="text-primary-500 font-medium">Project Preview</span>
                   </div>
                   <div className="absolute inset-0 bg-primary-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
@@ -222,29 +214,21 @@ const ProjectsOverview = () => {
                     <span className="text-sm text-primary-400 font-medium">{project.category}</span>
                     <div className="flex space-x-2">
                       <a
-                        href={project.githubUrl}
+                        href={project.liveUrl !== '#' ? project.liveUrl : project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-300"
                       >
-                        <Github size={18} />
-                      </a>
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-300"
-                      >
-                        <ExternalLink size={18} />
+                        {project.liveUrl !== '#' ? <ExternalLink size={18} /> : <Github size={18} />}
                       </a>
                     </div>
                   </div>
 
-                  <h4 className="text-xl font-bold text-white group-hover:text-primary-400 transition-colors duration-300">
+                  <h4 className="text-xl font-bold text-gray-900 group-hover:text-primary-500 transition-colors duration-300">
                     {project.title}
                   </h4>
 
-                  <p className="text-dark-400 text-sm leading-relaxed">
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {project.description}
                   </p>
 
@@ -252,7 +236,7 @@ const ProjectsOverview = () => {
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-dark-800 text-dark-300 text-xs rounded-full border border-dark-700"
+                        className="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full border border-gray-200"
                       >
                         {tech}
                       </span>

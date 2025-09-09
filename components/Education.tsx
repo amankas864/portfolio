@@ -44,31 +44,27 @@ const Education = () => {
 
   const certifications = [
     {
-      name: 'AWS Certified Solutions Architect',
+      name: 'IBI Certificate',
+      issuer: 'InfoBharatIntern',
+      date: '2024',
+      link: '#'
+    },
+    {
+      name: '100xDevs Certificate',
+      issuer: '100xDevs',
+      date: '2024',
+      link: '#'
+    },
+    {
+      name: 'AWS Cloud Practitioner',
       issuer: 'Amazon Web Services',
-      date: '2023',
-      credentialId: 'AWS-123456',
+      date: '2024',
       link: '#'
     },
     {
-      name: 'Google Cloud Professional Data Engineer',
+      name: 'GKE Certificate',
       issuer: 'Google Cloud',
-      date: '2023',
-      credentialId: 'GCP-789012',
-      link: '#'
-    },
-    {
-      name: 'Microsoft Certified: Azure Developer Associate',
-      issuer: 'Microsoft',
-      date: '2022',
-      credentialId: 'MS-345678',
-      link: '#'
-    },
-    {
-      name: 'TensorFlow Developer Certificate',
-      issuer: 'Google',
-      date: '2022',
-      credentialId: 'TF-901234',
+      date: '2024',
       link: '#'
     }
   ]
@@ -89,7 +85,7 @@ const Education = () => {
   }
 
   return (
-    <section id="education" className="section-padding bg-dark-900">
+    <section id="education" className="section-padding bg-gray-50">
       <div className="container-custom">
         <motion.div
           ref={ref}
@@ -100,13 +96,13 @@ const Education = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl lg:text-5xl font-bold text-white mb-4"
+            className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
           >
             Education & Certifications
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-dark-400 max-w-2xl mx-auto"
+            className="text-xl text-gray-600 max-w-2xl mx-auto"
           >
             My academic background and professional certifications
           </motion.p>
@@ -123,10 +119,10 @@ const Education = () => {
             <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
               <GraduationCap className="text-white" size={20} />
             </div>
-            <h3 className="text-3xl font-bold text-white">Academic Background</h3>
+            <h3 className="text-3xl font-bold text-gray-900">Academic Background</h3>
           </div>
 
-          <div className="space-y-8">
+          <div className="max-w-4xl mx-auto space-y-8">
             {education.map((edu, index) => (
               <motion.div
                 key={`${edu.institution}-${edu.degree}`}
@@ -139,26 +135,26 @@ const Education = () => {
                   {/* Header */}
                   <div className="flex items-start justify-between">
                     <div>
-                      <h4 className="text-xl font-bold text-white group-hover:text-primary-400 transition-colors duration-300">
+                      <h4 className="text-xl font-bold text-gray-900 group-hover:text-primary-500 transition-colors duration-300">
                         {edu.degree}
                       </h4>
                       <div className="flex items-center space-x-2 mt-1">
-                        <GraduationCap className="text-primary-400" size={16} />
-                        <span className="text-primary-400 font-medium">{edu.institution}</span>
+                        <GraduationCap className="text-primary-500" size={16} />
+                        <span className="text-primary-500 font-medium">{edu.institution}</span>
                       </div>
                     </div>
                     <a
                       href={edu.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-300"
+                      className="p-2 text-gray-500 hover:text-primary-500 transition-colors duration-300"
                     >
                       <ExternalLink size={18} />
                     </a>
                   </div>
 
                   {/* Details */}
-                  <div className="flex flex-wrap items-center gap-4 text-sm text-dark-400">
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
                     <div className="flex items-center space-x-1">
                       <Calendar size={14} />
                       <span>{edu.period}</span>
@@ -174,24 +170,10 @@ const Education = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-dark-300 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed">
                     {edu.description}
                   </p>
 
-                  {/* Achievements */}
-                  <div>
-                    <h5 className="text-sm font-semibold text-primary-400 mb-2">Key Achievements</h5>
-                    <div className="flex flex-wrap gap-2">
-                      {edu.achievements.map((achievement) => (
-                        <span
-                          key={achievement}
-                          className="px-3 py-1 bg-dark-800 text-primary-400 text-xs rounded-full border border-dark-700"
-                        >
-                          {achievement}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </motion.div>
             ))}
@@ -208,10 +190,10 @@ const Education = () => {
             <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
               <Award className="text-white" size={20} />
             </div>
-            <h3 className="text-3xl font-bold text-white">Professional Certifications</h3>
+            <h3 className="text-3xl font-bold text-gray-900">Professional Certifications</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
             {certifications.map((cert, index) => (
               <motion.div
                 key={cert.name}
@@ -224,27 +206,26 @@ const Education = () => {
                 <div className="space-y-4">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h4 className="text-lg font-bold text-white group-hover:text-primary-400 transition-colors duration-300">
+                      <h4 className="text-lg font-bold text-gray-900 group-hover:text-primary-500 transition-colors duration-300">
                         {cert.name}
                       </h4>
-                      <p className="text-primary-400 font-medium text-sm">{cert.issuer}</p>
+                      <p className="text-primary-500 font-medium text-sm">{cert.issuer}</p>
                     </div>
                     <a
                       href={cert.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-300"
+                      className="p-2 text-gray-500 hover:text-primary-500 transition-colors duration-300"
                     >
                       <ExternalLink size={16} />
                     </a>
                   </div>
 
-                  <div className="flex items-center justify-between text-sm text-dark-400">
+                  <div className="flex items-center justify-between text-sm text-gray-600">
                     <span>Issued: {cert.date}</span>
-                    <span className="font-mono text-xs">ID: {cert.credentialId}</span>
                   </div>
 
-                  <div className="w-full bg-dark-800 rounded-full h-1">
+                  <div className="w-full bg-gray-200 rounded-full h-1">
                     <div className="bg-gradient-to-r from-primary-500 to-primary-600 h-1 rounded-full w-full"></div>
                   </div>
                 </div>

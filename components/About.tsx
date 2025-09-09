@@ -17,7 +17,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="section-padding bg-dark-900">
+    <section id="about" className="section-padding" style={{ backgroundColor: 'var(--bg-primary)' }}>
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -33,7 +33,8 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-4xl lg:text-5xl font-bold text-white"
+                className="text-4xl lg:text-5xl font-bold"
+                style={{ color: 'var(--text-primary)' }}
               >
                 About Me
               </motion.h2>
@@ -42,7 +43,8 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-lg text-dark-300 leading-relaxed"
+                className="text-lg leading-relaxed"
+                style={{ color: 'var(--text-secondary)' }}
               >
                 I'm a passionate developer who bridges the gap between modern web technologies and data science. 
                 My journey began with a curiosity for building things that make a difference, leading me to master 
@@ -53,11 +55,12 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-lg text-dark-300 leading-relaxed"
+                className="text-lg leading-relaxed"
+                style={{ color: 'var(--text-secondary)' }}
               >
-                As a <span className="text-primary-400 font-semibold">Full-Stack Developer</span>, I create 
+                As a <span className="font-semibold" style={{ color: 'var(--accent-primary)' }}>Full-Stack Developer</span>, I create 
                 scalable web applications using React, Node.js, and modern cloud technologies. As a 
-                <span className="text-primary-400 font-semibold"> Data Scientist</span>, I develop 
+                <span className="font-semibold" style={{ color: 'var(--accent-primary)' }}> Data Scientist</span>, I develop 
                 machine learning models and extract meaningful insights from complex datasets.
               </motion.p>
             </div>
@@ -69,31 +72,31 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="space-y-4"
             >
-              <h3 className="text-xl font-semibold text-white">Key Strengths</h3>
+              <h3 className="text-xl font-semibold" style={{ color: 'var(--text-primary)' }}>Key Strengths</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-primary-500/20 rounded-lg flex items-center justify-center">
                     <Code className="text-primary-400" size={16} />
                   </div>
-                  <span className="text-dark-300">Full-Stack Development</span>
+                  <span style={{ color: 'var(--text-secondary)' }}>Full-Stack Development</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-primary-500/20 rounded-lg flex items-center justify-center">
                     <Brain className="text-primary-400" size={16} />
                   </div>
-                  <span className="text-dark-300">Machine Learning</span>
+                  <span style={{ color: 'var(--text-secondary)' }}>Machine Learning</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-primary-500/20 rounded-lg flex items-center justify-center">
                     <Users className="text-primary-400" size={16} />
                   </div>
-                  <span className="text-dark-300">Team Collaboration</span>
+                  <span style={{ color: 'var(--text-secondary)' }}>Team Collaboration</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-primary-500/20 rounded-lg flex items-center justify-center">
                     <TrendingUp className="text-primary-400" size={16} />
                   </div>
-                  <span className="text-dark-300">Problem Solving</span>
+                  <span style={{ color: 'var(--text-secondary)' }}>Problem Solving</span>
                 </div>
               </div>
             </motion.div>
@@ -114,13 +117,26 @@ const About = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.6, delay: index * 0.1 + 0.5 }}
-                  className="text-center p-6 bg-dark-800 border border-dark-700 rounded-xl hover:border-primary-500 transition-all duration-300"
+                  className="text-center p-6 rounded-xl transition-all duration-300"
+                  style={{
+                    backgroundColor: 'var(--bg-card)',
+                    border: '1px solid var(--border-light)',
+                    boxShadow: '0 4px 6px -1px var(--shadow-light), 0 2px 4px -1px var(--shadow-medium)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = 'var(--border-accent)';
+                    e.currentTarget.style.backgroundColor = 'var(--bg-hover)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = 'var(--border-light)';
+                    e.currentTarget.style.backgroundColor = 'var(--bg-card)';
+                  }}
                 >
                   <div className="w-12 h-12 bg-primary-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <stat.icon className="text-primary-400" size={24} />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-dark-400 text-sm">{stat.label}</div>
+                  <div className="text-3xl font-bold mb-2" style={{ color: 'var(--text-primary)' }}>{stat.value}</div>
+                  <div className="text-sm" style={{ color: 'var(--text-secondary)' }}>{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -130,10 +146,15 @@ const About = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="p-6 bg-gradient-to-br from-primary-500/10 to-primary-600/10 border border-primary-500/20 rounded-xl"
+              className="p-6 rounded-xl"
+              style={{
+                backgroundColor: 'var(--bg-card)',
+                border: '1px solid var(--border-accent)',
+                boxShadow: '0 4px 6px -1px var(--shadow-light), 0 2px 4px -1px var(--shadow-medium)'
+              }}
             >
-              <h4 className="text-lg font-semibold text-white mb-3">What I Do</h4>
-              <ul className="space-y-2 text-dark-300">
+              <h4 className="text-lg font-semibold mb-3" style={{ color: 'var(--text-primary)' }}>What I Do</h4>
+              <ul className="space-y-2" style={{ color: 'var(--text-secondary)' }}>
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-primary-400 rounded-full"></div>
                   <span>Build responsive web applications</span>

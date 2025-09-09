@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -47,8 +48,12 @@ const Header = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-dark-950/90 backdrop-blur-custom border-b border-dark-800' : 'bg-transparent'
+        scrolled ? 'backdrop-blur-custom border-b' : 'bg-transparent'
       }`}
+      style={{
+        backgroundColor: scrolled ? 'var(--bg-primary)' : 'transparent',
+        borderBottomColor: scrolled ? 'var(--border-light)' : 'transparent'
+      }}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -57,12 +62,13 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">A</span>
-            </div>
-            <span className="text-xl lg:text-2xl font-bold text-white">
-              Aman Kashyap
-            </span>
+            <Image
+              src="/AK signature.png"
+              alt="AK Signature"
+              width={160}
+              height={50}
+              className="h-12 w-auto"
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -73,7 +79,12 @@ const Header = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.href)}
-                className="text-dark-300 hover:text-primary-400 transition-colors duration-300 font-medium"
+                className="transition-colors duration-300 font-medium"
+                style={{ 
+                  color: 'var(--text-secondary)',
+                }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--accent-primary)'}
+                onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
               >
                 {item.name}
               </motion.button>
@@ -83,7 +94,10 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-white hover:text-primary-400 transition-colors duration-300"
+            className="lg:hidden p-2 transition-colors duration-300"
+            style={{ color: 'var(--text-secondary)' }}
+            onMouseEnter={(e) => e.target.style.color = 'var(--accent-primary)'}
+            onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -97,14 +111,27 @@ const Header = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-dark-900 border-t border-dark-800"
+              className="lg:hidden border-t"
+              style={{
+                backgroundColor: 'var(--bg-primary)',
+                borderTopColor: 'var(--border-light)'
+              }}
             >
               <div className="py-4 space-y-2">
                 {navItems.map((item) => (
                   <button
                     key={item.name}
                     onClick={() => scrollToSection(item.href)}
-                    className="block w-full text-left px-4 py-2 text-dark-300 hover:text-primary-400 hover:bg-dark-800 transition-all duration-300"
+                    className="block w-full text-left px-4 py-2 transition-all duration-300"
+                    style={{ color: 'var(--text-secondary)' }}
+                    onMouseEnter={(e) => {
+                      e.target.style.color = 'var(--accent-primary)';
+                      e.target.style.backgroundColor = 'var(--bg-hover)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.color = 'var(--text-secondary)';
+                      e.target.style.backgroundColor = 'transparent';
+                    }}
                   >
                     {item.name}
                   </button>
