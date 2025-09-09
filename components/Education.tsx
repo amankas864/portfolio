@@ -46,26 +46,26 @@ const Education = () => {
     {
       name: 'IBI Certificate',
       issuer: 'InfoBharatIntern',
-      date: '2024',
-      link: '#'
+      date: 'July 2025',
+      link: 'certificates/Aman Kashyap IBI.pdf'
     },
     {
       name: '100xDevs Certificate',
       issuer: '100xDevs',
-      date: '2024',
-      link: '#'
+      date: 'Aug 2024',
+      link: 'certificates/certificate.png'
     },
     {
       name: 'AWS Cloud Practitioner',
       issuer: 'Amazon Web Services',
-      date: '2024',
-      link: '#'
+      date: 'Feb 2024',
+      link: 'certificates/Coursera FRZAVB9RE5RZ.pdf'
     },
     {
       name: 'GKE Certificate',
       issuer: 'Google Cloud',
-      date: '2024',
-      link: '#'
+      date: 'March 2024',
+      link: 'certificates/Coursera WZENJKQ4PFTM.pdf'
     }
   ]
 

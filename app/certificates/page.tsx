@@ -47,6 +47,105 @@ const CertificatesPage = () => {
       category: 'Cloud Computing',
       filename: 'UC-7fa4b438-ad16-4662-afe1-cc2672c17907.pdf',
       type: 'pdf'
+    },
+    {
+      name: 'Python for Data Science',
+      issuer: 'Coursera',
+      date: '2023',
+      description: 'Comprehensive Python programming for data science applications.',
+      category: 'Data Science',
+      filename: 'python-data-science.pdf',
+      type: 'pdf'
+    },
+    {
+      name: 'Machine Learning Fundamentals',
+      issuer: 'Stanford Online',
+      date: '2023',
+      description: 'Introduction to machine learning algorithms and applications.',
+      category: 'Data Science',
+      filename: 'ml-fundamentals.pdf',
+      type: 'pdf'
+    },
+    {
+      name: 'Docker Certified Associate',
+      issuer: 'Docker Inc.',
+      date: '2023',
+      description: 'Containerization and orchestration with Docker.',
+      category: 'DevOps',
+      filename: 'docker-certified.pdf',
+      type: 'pdf'
+    },
+    {
+      name: 'Kubernetes Administrator',
+      issuer: 'CNCF',
+      date: '2023',
+      description: 'Kubernetes cluster administration and management.',
+      category: 'DevOps',
+      filename: 'kubernetes-admin.pdf',
+      type: 'pdf'
+    },
+    {
+      name: 'AWS Solutions Architect',
+      issuer: 'AWS',
+      date: '2023',
+      description: 'Designing distributed systems on AWS.',
+      category: 'Cloud Computing',
+      filename: 'aws-solutions-architect.pdf',
+      type: 'pdf'
+    },
+    {
+      name: 'React Developer Certification',
+      issuer: 'Meta',
+      date: '2023',
+      description: 'Advanced React development and best practices.',
+      category: 'Frontend Development',
+      filename: 'react-developer.pdf',
+      type: 'pdf'
+    },
+    {
+      name: 'Node.js Backend Development',
+      issuer: 'OpenJS Foundation',
+      date: '2023',
+      description: 'Server-side JavaScript development with Node.js.',
+      category: 'Backend Development',
+      filename: 'nodejs-backend.pdf',
+      type: 'pdf'
+    },
+    {
+      name: 'MongoDB Developer',
+      issuer: 'MongoDB Inc.',
+      date: '2023',
+      description: 'NoSQL database design and development.',
+      category: 'Database',
+      filename: 'mongodb-developer.pdf',
+      type: 'pdf'
+    },
+    {
+      name: 'TensorFlow Developer',
+      issuer: 'Google',
+      date: '2023',
+      description: 'Machine learning with TensorFlow framework.',
+      category: 'Data Science',
+      filename: 'tensorflow-developer.pdf',
+      type: 'pdf'
+    },
+    {
+      name: 'PostgreSQL Administration',
+      issuer: 'PostgreSQL.org',
+      date: '2023',
+      description: 'Advanced PostgreSQL database administration.',
+      category: 'Database',
+      filename: 'postgresql-admin.pdf',
+      type: 'pdf'
+    },
+    {
+      name: 'Git Version Control',
+      issuer: 'GitHub',
+      date: '2023',
+      description: 'Advanced Git workflows and collaboration.',
+      category: 'Development Tools',
+      filename: 'git-advanced.pdf',
+      type: 'pdf'
     }
   ]
 

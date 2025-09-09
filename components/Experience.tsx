@@ -17,7 +17,7 @@ const Experience = () => {
       location: 'Remote',
       description: 'Built machine learning models for customer segmentation and predictive analytics. Achieved 89% accuracy in customer churn prediction using ensemble methods. Developed data preprocessing pipelines and feature engineering techniques. Collaborated with cross-functional teams to implement data-driven solutions.',
       technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'SQL', 'Machine Learning', 'Data Analysis'],
-      link: '#'
+      link: 'certificates/Aman Kashyap IBI.pdf'
     }
   ]
 

@@ -130,8 +130,8 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-secondary-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
               
               {/* Kali Linux Logo Container */}
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full p-6 sm:p-8 flex items-center justify-center">
-                <div className="w-full h-full bg-white rounded-full flex items-center justify-center">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 p-6 sm:p-8 flex items-center justify-center">
+                <div className="w-full h-full rounded-full flex items-center justify-center">
                   {/* Kali Linux Logo */}
                   <Image
                     src="/kali.png"

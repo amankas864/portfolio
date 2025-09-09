@@ -24,7 +24,7 @@ const ProjectsOverview = () => {
       title: 'Brainstack - Education Platform',
       description: 'Comprehensive online education platform designed to enhance learning experiences with interactive features.',
       image: '/brainstack.png',
-      tech: ['React', 'Node.js', 'MongoDB', 'Express', 'JavaScript'],
+      tech: ['React', 'Next.js', 'MongoDB', 'Firebase', 'JavaScript'],
       liveUrl: 'https://www.brainstackeducation.in',
       githubUrl: '#',
       category: 'Full-Stack'
@@ -33,8 +33,8 @@ const ProjectsOverview = () => {
       title: 'R-Cart',
       description: 'Modern e-commerce shopping cart application with user-friendly interface and seamless shopping experience.',
       image: '/r-cart.png',
-      tech: ['React', 'JavaScript', 'CSS', 'HTML', 'Local Storage'],
-      liveUrl: '#',
+      tech: ['React', 'JavaScript', 'Tailwind CSS', 'Clerk'],
+      liveUrl: 'https://r-cart-black.vercel.app/',
       githubUrl: 'https://github.com/amankas864/R-Cart',
       category: 'Full-Stack'
     }
@@ -60,13 +60,13 @@ const ProjectsOverview = () => {
       category: 'Data Science'
     },
     {
-      title: 'Machine Learning Project',
-      description: 'Advanced machine learning project showcasing various algorithms and data analysis techniques.',
+      title: 'Gameplay using NEAT',
+      description: 'Advanced Deep learning project showcasing ai playing game using NEAT algorithm. A Reinforcement Learning algo.',
       image: '/api/placeholder/400/250',
-      tech: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib'],
-      liveUrl: '#',
-      githubUrl: '#',
-      category: 'Data Science'
+      tech: ['Python', 'Scikit-learn', 'Pygame', 'NumPy', 'NEAT'],
+      liveUrl: 'https://github.com/amankas864/neat-dl-py',
+      githubUrl: 'https://github.com/amankas864/neat-dl-py',
+      category: 'Deep Learning'
     }
   ]
 
