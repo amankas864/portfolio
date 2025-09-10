@@ -15,26 +15,35 @@ const CertificatesPage = () => {
     {
       name: 'IBI',
       issuer: 'IBI',
-      date: '2023',
-      description: 'Professional certification from IBI institute.',
+      date: '2025',
+      description: 'Professional certification from IBI.',
       category: 'Professional',
       filename: 'Aman Kashyap IBI.pdf',
       type: 'pdf'
     },
     {
+      name: 'Hi-Tech Sensors',
+      issuer: 'Hi-Tech Sensors',
+      date: '2025',
+      description: 'Software Development Engineer Intern certification from Hi-Tech Sensors.',
+      category: 'Professional',
+      filename: 'hitech certificate.pdf',
+      type: 'pdf'
+    },
+    {
       name: '100xDevs',
       issuer: '100xDevs',
-      date: '2023',
+      date: '2024',
       description: 'Full-stack development certification from 100xDevs.',
       category: 'Full-Stack Development',
       filename: 'certificate.png',
       type: 'image'
     },
     {
-      name: 'AWS Cloud Practitioner',
+      name: 'AWS Machine Learning Foundations',
       issuer: 'AWS',
       date: '2023',
-      description: 'AWS Cloud Practitioner certification.',
+      description: 'AWS Machine Learning Foundations certification.',
       category: 'Cloud Computing',
       filename: 'AWS_Academy_Machine_Learning_Foundations_Badge.pdf',
       type: 'pdf'
@@ -45,116 +54,89 @@ const CertificatesPage = () => {
       date: '2023',
       description: 'Google Kubernetes Engine certification.',
       category: 'Cloud Computing',
-      filename: 'UC-7fa4b438-ad16-4662-afe1-cc2672c17907.pdf',
+      filename: 'Coursera WZENJKQ4PFTM.pdf',
       type: 'pdf'
     },
     {
-      name: 'Python for Data Science',
+      name: 'Android Development Course',
+      issuer: 'Udemy',
+      date: '2018',
+      description: 'Android Development Course certification from Udemy by Paul Dichone.',
+      category: 'Mobile Development',
+      filename: 'Android Udemy.jpg',
+      type: 'image'
+    },{
+      name: 'Supervised Machine Learning',
       issuer: 'Coursera',
       date: '2023',
-      description: 'Comprehensive Python programming for data science applications.',
+      description: 'Supervised Machine Learning: Regression and Classification certification from Coursera.',
+      category: 'Machine Learning',
+      filename: 'Coursera 2BDRUZU6223K.pdf',
+      type: 'pdf'
+    },{
+      name: 'AWS Cloud Practitioner',
+      issuer: 'Coursera',
+      date: '2024',
+      description: 'AWS Cloud Practitioner certification from Coursera.',
       category: 'Data Science',
-      filename: 'python-data-science.pdf',
+      filename: 'Coursera FRZAVB9RE5RZ.pdf',
       type: 'pdf'
-    },
-    {
-      name: 'Machine Learning Fundamentals',
-      issuer: 'Stanford Online',
+    },{
+      name: 'Networking Basics',
+      issuer: 'Cisco',
       date: '2023',
-      description: 'Introduction to machine learning algorithms and applications.',
-      category: 'Data Science',
-      filename: 'ml-fundamentals.pdf',
+      description: 'Student level credential for Networking Basics.',
+      category: 'Computer Networks',
+      filename: 'Networking_Basics_Badge.pdf',
       type: 'pdf'
-    },
-    {
-      name: 'Docker Certified Associate',
-      issuer: 'Docker Inc.',
-      date: '2023',
-      description: 'Containerization and orchestration with Docker.',
-      category: 'DevOps',
-      filename: 'docker-certified.pdf',
+    },{
+      name: '100 Days of code',
+      issuer: 'Udemy',
+      date: '2024',
+      description: '100 Days of code certification by Angela Yu.',
+      category: 'Python',
+      filename: 'UC-7fa4b438-ad16-4662-afe1-cc2672c17907.pdf',
       type: 'pdf'
-    },
-    {
-      name: 'Kubernetes Administrator',
-      issuer: 'CNCF',
-      date: '2023',
-      description: 'Kubernetes cluster administration and management.',
-      category: 'DevOps',
-      filename: 'kubernetes-admin.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'AWS Solutions Architect',
-      issuer: 'AWS',
-      date: '2023',
-      description: 'Designing distributed systems on AWS.',
-      category: 'Cloud Computing',
-      filename: 'aws-solutions-architect.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'React Developer Certification',
-      issuer: 'Meta',
-      date: '2023',
-      description: 'Advanced React development and best practices.',
-      category: 'Frontend Development',
-      filename: 'react-developer.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'Node.js Backend Development',
-      issuer: 'OpenJS Foundation',
-      date: '2023',
-      description: 'Server-side JavaScript development with Node.js.',
-      category: 'Backend Development',
-      filename: 'nodejs-backend.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'MongoDB Developer',
-      issuer: 'MongoDB Inc.',
-      date: '2023',
-      description: 'NoSQL database design and development.',
-      category: 'Database',
-      filename: 'mongodb-developer.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'TensorFlow Developer',
-      issuer: 'Google',
-      date: '2023',
-      description: 'Machine learning with TensorFlow framework.',
-      category: 'Data Science',
-      filename: 'tensorflow-developer.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'PostgreSQL Administration',
-      issuer: 'PostgreSQL.org',
-      date: '2023',
-      description: 'Advanced PostgreSQL database administration.',
-      category: 'Database',
-      filename: 'postgresql-admin.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'Git Version Control',
-      issuer: 'GitHub',
-      date: '2023',
-      description: 'Advanced Git workflows and collaboration.',
-      category: 'Development Tools',
-      filename: 'git-advanced.pdf',
-      type: 'pdf'
-    },
-    {
-      name: 'Hi-Tech Sensors Internship',
-      issuer: 'Hi-Tech Sensors',
-      date: '2025',
-      description: 'Software Development Engineer Intern certification from Hi-Tech Sensors.',
+    },{
+      name: 'C Professional Level',
+      issuer: 'SRM IEEE PURDUE',
+      date: '2022',
+      description: 'C Professional Level certification from SRM Directorate of Learning and Development.',
       category: 'Professional',
-      filename: 'hitech certificate.pdf',
+      filename: 'C Professional level.pdf',
       type: 'pdf'
+    },{
+      name: 'OOPS Professional Level',
+      issuer: 'SRM IEEE PURDUE',
+      date: '2023',
+      description: 'OOPS Professional Level certification from SRM Directorate of Learning and Development.',
+      category: 'Professional',
+      filename: 'OOPS Basic level.pdf',
+      type: 'pdf'
+    },{
+      name: 'JavaScript Solo Learn',
+      issuer: 'Solo Learn',
+      date: '2021',
+      description: 'Java Programming certification by Solo Learn.',
+      category: 'Programming',
+      filename: 'JS Solo learn.png',
+      type: 'image'
+    },{
+      name: 'Python Solo Learn',
+      issuer: 'Solo Learn',
+      date: '2021',
+      description: 'Python Programming certification by Solo Learn.',
+      category: 'Programming',
+      filename: 'Python Solo learn.png',
+      type: 'image'
+    },{
+      name: 'C++ Solo Learn',
+      issuer: 'Solo Learn',
+      date: '2021',
+      description: 'C++ Programming certification by Solo Learn.',
+      category: 'Programming',
+      filename: 'C++ Solo learn.png',
+      type: 'image'
     }
   ]
 

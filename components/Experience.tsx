@@ -15,7 +15,7 @@ const Experience = () => {
       company: 'Hi-Tech Sensors',
       period: 'April 2025 - June 2025',
       location: 'Remote',
-      description: 'Completed 2 months of full-stack training in JavaScript, React, Node.js, and MongoDB, rapidly gaining proficiency in building scalable applications. Developed and deployed a role-based full-stack module that improved data processing speed by ~25% through optimized MongoDB queries and asynchronous APIs. Built responsive React.js interfaces and integrated RESTful APIs with Express.js, enhancing usability and reliability for internal sensor monitoring systems. Streamlined deployment by containerizing services with Docker and automating delivery via Git-based CI/CD pipelines, ensuring smooth production rollout.',
+      description: 'Completed 2 months of full-stack training (JavaScript, React, Node.js, MongoDB), then developed and deployed a role-based module that improved processing speed by ~25%. Built responsive React interfaces with Express APIs and streamlined deployment using Docker and Git-based CI/CD.',
       technologies: ['JavaScript', 'React', 'Node.js', 'MongoDB', 'Express.js', 'Docker', 'Git', 'CI/CD', 'RESTful APIs']
     },
     {
