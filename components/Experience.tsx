@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Briefcase, Calendar, MapPin, ExternalLink } from 'lucide-react'
+import { Briefcase, Calendar, MapPin } from 'lucide-react'
 
 const Experience = () => {
   const ref = useRef(null)
@@ -11,13 +11,20 @@ const Experience = () => {
 
   const experiences = [
     {
+      title: 'Software Development Engineer Intern',
+      company: 'Hi-Tech Sensors',
+      period: 'April 2025 - June 2025',
+      location: 'Remote',
+      description: 'Completed 2 months of full-stack training in JavaScript, React, Node.js, and MongoDB, rapidly gaining proficiency in building scalable applications. Developed and deployed a role-based full-stack module that improved data processing speed by ~25% through optimized MongoDB queries and asynchronous APIs. Built responsive React.js interfaces and integrated RESTful APIs with Express.js, enhancing usability and reliability for internal sensor monitoring systems. Streamlined deployment by containerizing services with Docker and automating delivery via Git-based CI/CD pipelines, ensuring smooth production rollout.',
+      technologies: ['JavaScript', 'React', 'Node.js', 'MongoDB', 'Express.js', 'Docker', 'Git', 'CI/CD', 'RESTful APIs']
+    },
+    {
       title: 'Data Science Intern',
       company: 'InfoBharatIntern',
       period: 'Jun 2025 - July 2025',
       location: 'Remote',
       description: 'Built machine learning models for customer segmentation and predictive analytics. Achieved 89% accuracy in customer churn prediction using ensemble methods. Developed data preprocessing pipelines and feature engineering techniques. Collaborated with cross-functional teams to implement data-driven solutions.',
-      technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'SQL', 'Machine Learning', 'Data Analysis'],
-      link: 'certificates/Aman Kashyap IBI.pdf'
+      technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'SQL', 'Machine Learning', 'Data Analysis']
     }
   ]
 
@@ -99,14 +106,6 @@ const Experience = () => {
                             <span className="text-primary-500 font-medium">{experience.company}</span>
                           </div>
                         </div>
-                        <a
-                          href={experience.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 text-gray-500 hover:text-primary-500 transition-colors duration-300"
-                        >
-                          <ExternalLink size={18} />
-                        </a>
                       </div>
 
                       {/* Period & Location */}

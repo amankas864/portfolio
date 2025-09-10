@@ -146,6 +146,15 @@ const CertificatesPage = () => {
       category: 'Development Tools',
       filename: 'git-advanced.pdf',
       type: 'pdf'
+    },
+    {
+      name: 'Hi-Tech Sensors Internship',
+      issuer: 'Hi-Tech Sensors',
+      date: '2025',
+      description: 'Software Development Engineer Intern certification from Hi-Tech Sensors.',
+      category: 'Professional',
+      filename: 'hitech certificate.pdf',
+      type: 'pdf'
     }
   ]
 
