@@ -85,7 +85,7 @@ const Education = () => {
   }
 
   return (
-    <section id="education" className="section-padding bg-gray-50">
+    <section id="education" className="section-padding" style={{ backgroundColor: 'var(--bg-secondary)' }}>
       <div className="container-custom">
         <motion.div
           ref={ref}
@@ -96,13 +96,15 @@ const Education = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            className="text-4xl lg:text-5xl font-bold mb-4"
+            style={{ color: 'var(--text-primary)' }}
           >
             Education & Certifications
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
+            className="text-xl max-w-2xl mx-auto"
+            style={{ color: 'var(--text-secondary)' }}
           >
             My academic background and professional certifications
           </motion.p>
@@ -119,7 +121,7 @@ const Education = () => {
             <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
               <GraduationCap className="text-white" size={20} />
             </div>
-            <h3 className="text-3xl font-bold text-gray-900">Academic Background</h3>
+            <h3 className="text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>Academic Background</h3>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-8">
@@ -135,7 +137,7 @@ const Education = () => {
                   {/* Header */}
                   <div className="flex items-start justify-between">
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900 group-hover:text-primary-500 transition-colors duration-300">
+                      <h4 className="text-xl font-bold group-hover:text-primary-500 transition-colors duration-300" style={{ color: 'var(--text-primary)' }}>
                         {edu.degree}
                       </h4>
                       <div className="flex items-center space-x-2 mt-1">
@@ -147,14 +149,15 @@ const Education = () => {
                       href={edu.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 text-gray-500 hover:text-primary-500 transition-colors duration-300"
+                      className="p-2 transition-colors duration-300"
+                      style={{ color: 'var(--text-secondary)' }}
                     >
                       <ExternalLink size={18} />
                     </a>
                   </div>
 
                   {/* Details */}
-                  <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+                  <div className="flex flex-wrap items-center gap-4 text-sm" style={{ color: 'var(--text-secondary)' }}>
                     <div className="flex items-center space-x-1">
                       <Calendar size={14} />
                       <span>{edu.period}</span>
@@ -170,7 +173,7 @@ const Education = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                     {edu.description}
                   </p>
 
@@ -190,7 +193,7 @@ const Education = () => {
             <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
               <Award className="text-white" size={20} />
             </div>
-            <h3 className="text-3xl font-bold text-gray-900">Professional Certifications</h3>
+            <h3 className="text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>Professional Certifications</h3>
           </div>
 
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
@@ -206,7 +209,7 @@ const Education = () => {
                 <div className="space-y-4">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h4 className="text-lg font-bold text-gray-900 group-hover:text-primary-500 transition-colors duration-300">
+                      <h4 className="text-lg font-bold group-hover:text-primary-500 transition-colors duration-300" style={{ color: 'var(--text-primary)' }}>
                         {cert.name}
                       </h4>
                       <p className="text-primary-500 font-medium text-sm">{cert.issuer}</p>
@@ -215,17 +218,18 @@ const Education = () => {
                       href={cert.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 text-gray-500 hover:text-primary-500 transition-colors duration-300"
+                      className="p-2 transition-colors duration-300"
+                      style={{ color: 'var(--text-secondary)' }}
                     >
                       <ExternalLink size={16} />
                     </a>
                   </div>
 
-                  <div className="flex items-center justify-between text-sm text-gray-600">
+                  <div className="flex items-center justify-between text-sm" style={{ color: 'var(--text-secondary)' }}>
                     <span>Issued: {cert.date}</span>
                   </div>
 
-                  <div className="w-full bg-gray-200 rounded-full h-1">
+                  <div className="w-full rounded-full h-1" style={{ backgroundColor: 'var(--border-light)' }}>
                     <div className="bg-gradient-to-r from-primary-500 to-primary-600 h-1 rounded-full w-full"></div>
                   </div>
                 </div>

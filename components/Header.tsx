@@ -2,12 +2,30 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Sun, Moon } from 'lucide-react'
 import Image from 'next/image'
+import { useTheme } from '@/contexts/ThemeContext'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  
+  // Safe theme access
+  let theme = 'light'
+  let toggleTheme = () => {}
+  
+  try {
+    const themeContext = useTheme()
+    theme = themeContext.theme
+    toggleTheme = themeContext.toggleTheme
+  } catch (error) {
+    // Theme context not available during SSR
+  }
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -91,16 +109,47 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 transition-colors duration-300"
+          {/* Theme Toggle & Mobile Menu Button */}
+          <div className="flex items-center space-x-2">
+            {/* Dark Mode Toggle - Only render when mounted */}
+            {mounted && (
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={toggleTheme}
+                className="p-2 rounded-lg transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                style={{
+                  backgroundColor: 'var(--bg-card)',
+                  border: '1px solid var(--border-light)',
+                  color: 'var(--text-secondary)'
+                }}
+                onMouseEnter={(e) => {
+                  const target = e.target as HTMLElement;
+                  target.style.backgroundColor = 'var(--bg-hover)';
+                  target.style.color = 'var(--accent-primary)';
+                }}
+                onMouseLeave={(e) => {
+                  const target = e.target as HTMLElement;
+                  target.style.backgroundColor = 'var(--bg-card)';
+                  target.style.color = 'var(--text-secondary)';
+                }}
+                aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+              >
+                {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+              </motion.button>
+            )}
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 transition-colors duration-300"
             style={{ color: 'var(--text-secondary)' }}
             onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'var(--accent-primary)'}
             onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

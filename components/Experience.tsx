@@ -55,13 +55,15 @@ const Experience = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            className="text-4xl lg:text-5xl font-bold mb-4"
+            style={{ color: 'var(--text-primary)' }}
           >
             Work Experience
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
+            className="text-xl max-w-2xl mx-auto"
+            style={{ color: 'var(--text-secondary)' }}
           >
             My professional journey in technology and data science
           </motion.p>
@@ -98,7 +100,7 @@ const Experience = () => {
                       {/* Header */}
                       <div className="flex items-start justify-between">
                         <div>
-                          <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary-500 transition-colors duration-300">
+                          <h3 className="text-xl font-bold group-hover:text-primary-500 transition-colors duration-300" style={{ color: 'var(--text-primary)' }}>
                             {experience.title}
                           </h3>
                           <div className="flex items-center space-x-2 mt-1">
@@ -109,7 +111,7 @@ const Experience = () => {
                       </div>
 
                       {/* Period & Location */}
-                      <div className="flex items-center space-x-4 text-sm text-gray-600">
+                      <div className="flex items-center space-x-4 text-sm" style={{ color: 'var(--text-secondary)' }}>
                         <div className="flex items-center space-x-1">
                           <Calendar size={14} />
                           <span>{experience.period}</span>
@@ -121,7 +123,7 @@ const Experience = () => {
                       </div>
 
                       {/* Description */}
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                         {experience.description}
                       </p>
 
@@ -130,7 +132,8 @@ const Experience = () => {
                         {experience.technologies.map((tech) => (
                           <span
                             key={tech}
-                            className="px-3 py-1 bg-gray-100 text-primary-500 text-xs rounded-full border border-gray-200"
+                            className="px-3 py-1 text-primary-500 text-xs rounded-full"
+                            style={{ backgroundColor: 'var(--bg-card)', border: '1px solid var(--border-light)' }}
                           >
                             {tech}
                           </span>

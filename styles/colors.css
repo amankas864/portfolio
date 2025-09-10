@@ -26,6 +26,34 @@
   --shadow-medium: rgba(168, 85, 247, 0.15);
 }
 
+/* Dark Theme */
+[data-theme="dark"] {
+  /* Background Colors */
+  --bg-primary: #0f0f0f; /* Dark background */
+  --bg-secondary: #1a1a1a; /* Slightly lighter dark */
+  --bg-card: #1e1e1e; /* Dark cards */
+  --bg-hover: #2a2a2a; /* Dark hover */
+  
+  /* Text Colors */
+  --text-primary: #ffffff; /* White for main text */
+  --text-secondary: #b3b3b3; /* Light gray for secondary text */
+  --text-muted: #808080; /* Medium gray for muted text */
+  
+  /* Accent Colors */
+  --accent-primary: #a855f7; /* Purple (same) */
+  --accent-secondary: #ec4899; /* Pink (same) */
+  --accent-hover: #9333ea; /* Darker purple for hover */
+  
+  /* Border Colors */
+  --border-light: #333333; /* Dark borders */
+  --border-medium: #404040; /* Medium dark borders */
+  --border-accent: #6b46c1; /* Purple borders */
+  
+  /* Shadow Colors */
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.2);
+}
+
 /* Apply color scheme to components */
 .bg-primary {
   background-color: var(--bg-primary);

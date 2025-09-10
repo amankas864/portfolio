@@ -41,7 +41,8 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-4xl lg:text-6xl font-bold text-gray-900"
+                className="text-4xl lg:text-6xl font-bold"
+                style={{ color: 'var(--text-primary)' }}
               >
                 Hello, I'm{' '}
                 <span className="gradient-text">Aman Kashyap</span>
@@ -51,7 +52,8 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-2xl lg:text-3xl text-gray-600 font-medium"
+                className="text-2xl lg:text-3xl font-medium"
+                style={{ color: 'var(--text-secondary)' }}
               >
                 Full-Stack Developer & Data Scientist
               </motion.h2>
@@ -60,7 +62,8 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-lg text-gray-500 max-w-lg"
+                className="text-lg max-w-lg"
+                style={{ color: 'var(--text-secondary)' }}
               >
                 Passionate about creating innovative web solutions and extracting insights from data. 
                 Combining modern web technologies with machine learning to build impactful applications.
@@ -100,7 +103,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 1.0 }}
               className="flex items-center space-x-6"
             >
-              <span className="text-gray-500">Follow me:</span>
+              <span style={{ color: 'var(--text-secondary)' }}>Follow me:</span>
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.label}
@@ -109,7 +112,8 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="text-gray-500 hover:text-primary-500 transition-colors duration-300"
+                  className="transition-colors duration-300"
+                  style={{ color: 'var(--text-secondary)' }}
                   aria-label={social.label}
                 >
                   <social.icon size={24} />

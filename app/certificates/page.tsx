@@ -6,6 +6,7 @@ import { useRef } from 'react'
 import { ArrowLeft, Award, Calendar, ExternalLink, Download, FileText, Image as ImageIcon } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { ThemeProvider } from '@/contexts/ThemeContext'
 
 const CertificatesPage = () => {
   const ref = useRef(null)
@@ -170,7 +171,8 @@ const CertificatesPage = () => {
   }
 
   return (
-    <main className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary)' }}>
+    <ThemeProvider>
+      <main className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary)' }}>
       {/* Header */}
       <motion.header
         initial={{ y: -100 }}
@@ -262,7 +264,7 @@ const CertificatesPage = () => {
                         <div className="flex flex-col items-center justify-center h-full">
                           <FileText className="text-primary-400 mb-2" size={48} />
                           <span className="text-primary-400 text-sm font-medium">PDF Certificate</span>
-                          <span className="text-dark-400 text-xs mt-1">{cert.filename}</span>
+                          <span className="text-xs mt-1" style={{ color: 'var(--text-secondary)' }}>{cert.filename}</span>
                         </div>
                       ) : (
                         <Award className="text-primary-400" size={48} />
@@ -360,6 +362,7 @@ const CertificatesPage = () => {
         </div>
       </div>
     </main>
+    </ThemeProvider>
   )
 }
 
