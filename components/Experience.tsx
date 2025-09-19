@@ -11,14 +11,6 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: 'Software Development Engineer Intern',
-      company: 'Hi-Tech Sensors',
-      period: 'April 2025 - June 2025',
-      location: 'Remote',
-      description: 'Completed 2 months of full-stack training (JavaScript, React, Node.js, MongoDB), then developed and deployed a role-based module that improved processing speed by ~25%. Built responsive React interfaces with Express APIs and streamlined deployment using Docker and Git-based CI/CD.',
-      technologies: ['JavaScript', 'React', 'Node.js', 'MongoDB', 'Express.js', 'Docker', 'Git', 'CI/CD', 'RESTful APIs']
-    },
-    {
       title: 'Data Science Intern',
       company: 'InfoBharatIntern',
       period: 'Jun 2025 - July 2025',

@@ -23,15 +23,6 @@ const CertificatesPage = () => {
       type: 'pdf'
     },
     {
-      name: 'Hi-Tech Sensors',
-      issuer: 'Hi-Tech Sensors',
-      date: '2025',
-      description: 'Software Development Engineer Intern certification from Hi-Tech Sensors.',
-      category: 'Professional',
-      filename: 'hitech certificate.pdf',
-      type: 'pdf'
-    },
-    {
       name: '100xDevs',
       issuer: '100xDevs',
       date: '2024',
