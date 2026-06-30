@@ -5,20 +5,14 @@ import { Download, ArrowRight, Github, Linkedin, Instagram } from 'lucide-react'
 import Image from 'next/image'
 
 const Hero = () => {
-  const handleResumeDownload = (type: 'fullstack' | 'datascience') => {
-    // This would link to your actual resume files
-    const resumeUrls = {
-      fullstack: '/Resume_Full_Stack.pdf',
-      datascience: '/Resume_DS.pdf'
-    }
-    
-    const link = document.createElement('a')
-    link.href = resumeUrls[type]
-    link.download = `Aman_Kashyap_${type === 'fullstack' ? 'FullStack' : 'DataScience'}_Resume.pdf`
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
+  const handleResumeDownload = () => {
+  const link = document.createElement('a')
+  link.href = '/Resume_AK.pdf'
+  link.download = 'Aman_Kashyap_Resume.pdf'
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+}
 
   const socialLinks = [
     { icon: Github, href: 'https://github.com/amankas864', label: 'GitHub' },
@@ -79,19 +73,11 @@ const Hero = () => {
             >
               <div className="flex gap-2">
                 <button
-                  onClick={() => handleResumeDownload('fullstack')}
+                  onClick={handleResumeDownload}
                   className="btn-secondary group"
                 >
                   <Download className="mr-2 group-hover:scale-110 transition-transform duration-300" />
-                  Full-Stack Resume
-                </button>
-                
-                <button
-                  onClick={() => handleResumeDownload('datascience')}
-                  className="btn-secondary group"
-                >
-                  <Download className="mr-2 group-hover:scale-110 transition-transform duration-300" />
-                  Data Science Resume
+                  My Resumé
                 </button>
               </div>
             </motion.div>
